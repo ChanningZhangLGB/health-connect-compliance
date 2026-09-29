@@ -1,0 +1,11 @@
+// ==== MainActivity.java ====
+
+package com.fitlefy.fitlefy;
+
+import ta.AbstractActivityC5128h;
+
+/* loaded from: classes.dex */
+public final class MainActivity extends AbstractActivityC5128h {
+}
+
+

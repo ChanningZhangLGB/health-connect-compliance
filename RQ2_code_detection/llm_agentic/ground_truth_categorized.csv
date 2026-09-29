@@ -1,0 +1,674 @@
+package,ground_truth,compliance,top_level,category_2nd_level,category_3rd_level,located
+ai.feebe.mobile,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+androidgecko.com.himommy,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+apk.newu.production_app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+app.aworld,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+app.bpjs.mobile,VIOLATION,No,P,Link to unrelated pages,App UI,No
+app.breezer,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+app.club15,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+app.corporatefitness,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+app.dynamorewards,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+app.flinq.athlete,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+app.growwithjo.diet.fitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+app.loseweight,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+app.perfectposture,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+app.planks.workout,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+app.revital.reconnz,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+app.rubberbands.fit,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+app.sparcs,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+app.vivoo.io,VIOLATION,No,P,Error,Error-blank page,Yes
+app.workout.movebody,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+app.workout.pilates,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+at.info.fity,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+au.com.medibank.phs,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+au.org.steps10000.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+bike.cobi.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+bodypro.fit.app,VIOLATION,No,P,Error,Error-file not found,Yes
+bot.wysa.swissre,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+br.com.epistemic,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+club.triibe.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+cn.fitdays.fitdays,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+cn.icomon.fitdayspro,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+cn.icomon.fitdayspro.silvergear,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+co.choosebright.client,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+co.com.sura.seguros,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+co.groundsapp.grounds,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+co.hellocode.exist,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+co.outch.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+co.uk.davidlloyd.mobileapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+co.well.wellapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+coach.zing.fitness,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ChallengeRunner.www,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.FitterFly.Wellness,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.absolutelydigital.stepchain,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.abyxfit.abyxfitrun,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.alanmobile,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.alltrails.alltrails,VIOLATION,No,P,Error,Error-file not found,Yes
+com.allurion,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.alphaprogression.alphaprogression,VIOLATION,No,P,Error,Error-file not found,Yes
+com.alter_v2,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.app.aiscale,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.app.fitage,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.app.ge,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.app.realfitzclientandroid.fitness,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.apposter.watchmaker,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.apzumi.mobile.dietlabs.dietByAnn,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.arcascope.shift_app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.art.caldiet,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.asanayoga.asanarebel,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.asus.mbsw.vivowatch_2,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.athletico.athletico,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.aura_medical.auratrack,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.avironactive.mobile,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.azeoo,VIOLATION,No,P,Error,Error-blank page,Yes
+com.band.iowofit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.bcbst.wellframe.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.bearable,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.benda.fitpro,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.benio.iot.fit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.beside.beurewards,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.bettertogether.us,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.beurer.healthmanager,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.bfent.movemeapp,VIOLATION,No,P,Error,Error-file not found,Yes
+com.blinkmap,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.bluesignum.bluediary,VIOLATION,No,P,Error,Error-blank page,Yes
+com.bodbot.trainer,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.bodybuilding.rise,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.bookdoc.bookdoc,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.bosch.ebike,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.bosoapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.breathwork.othership,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.burnbyrebecca.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.bws.appv2,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.caliberfitness.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.calistree.calistree,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.captivate.meckparkrec,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.captivate.nooksports,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.captivate.ymcadetroit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.carnimeat.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.casparhealth.android.patient,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.casparhealth.android.patient.ebel,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.casparhealth.android.patient.medicos,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.casparhealth.android.patient.paracelsus,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.casparhealth.android.patient.passauer,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.catai.app,VIOLATION,No,P,Error,Error-blank page,Yes
+com.celled.webapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.championhealth.app,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.chapter3.acthive,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.chronicinsights,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.chronostar.smartwatches,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.circul.zg29,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.clsds.trialkit,VIOLATION,No,P,Error,Error-blank page,Yes
+com.cmoney.slowjogging,VIOLATION,No,P,Error,Error-blank page,Yes
+com.codingmachine,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.cofox.kahunas.Kahunas,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.conekt.nimble,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.consumedbycode.slopes,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.cooleaf.Cooleaf,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.core_track,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.corehealth.mywellapp,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.counterweight.mobile,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.creamsoft.burnthemdown,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.creamsoft.mycholesterol,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.cronometer.android.gold,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.ddm.diabetes.gro,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.dexcom.g6,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.dexcom.g7,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.dieringe.workout,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.diet.pixsterstudio.ketodietican,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.distantrace.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.distillr.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.dkonash.breathnow,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.dkvservicios.quierocuidarmemas,VIOLATION,No,P,Error,Error-other,Yes
+com.dmdbrands.gurus.weight,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.doh.sahatna,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.doshcook.doshwalk,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.dungelin.heartrate,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.eatthismuch,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ebelter.bwell,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.eddiihealth.eddii,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.elink.fittrackhealth.pro,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ellisapps.itrackbitesplus,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.emocha,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.emorya.emorya_sport_app_flutter,VIOLATION,No,P,No response,No response,Yes
+com.epsyhealth.epsy,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.etekcity.vesyncplatform,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fastrack.reflex.vox,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fatsecret.android,VIOLATION,No,P,Error,Error-blank page,Yes
+com.femo.health,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.fitapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fitatu.tracker,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fitbit.FitbitMobile,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.fitbod.fitbod,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fitelo.android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fitinprogress.programs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fitlapapp,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.fitlefy.fitlefy,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fitnessaccounter.app,VIOLATION,No,P,Error,Error-file not found,Yes
+com.fitnesskeeper.runkeeper.pro,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fitnow.loseit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fitze,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.flok.flokhealth,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fossil.wearables.fossil,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fourtechnologies.mynetdiary.ad,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.fozento.zdfit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.frankmedrano.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.freeletics.lite,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.funnmedia.calory,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.funnmedia.fitnessview,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.funnmedia.waterminder,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.fysiki.fizzup,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.getfitmining.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.getsetfit.gsf,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.glean.prod.android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.globant.starmeup,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.globics.pininfarina,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.gojauntly.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.gojoe.app,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.goodbarber.convergeintl,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.google.android.apps.fitness,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.guavahealth.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.gymdone.gymworkouttrainer,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.gymflix.programs,VIOLATION,No,P,Error,Error-other,Yes
+com.gymproluxe,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.h2sync.android.h2syncapp,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.ha.prepsmart,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.hanako.hanako.androidui.daimler,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.haraldai.happybob,VIOLATION,No,P,No response,No response,Yes
+com.hasz.gymrats.app,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.healbe.healbegobe,VIOLATION,No,P,No response,No response,Yes
+com.healthapplines.android.pedometer,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.healtharx.beato,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.healthe.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.healthifyme.basic,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.healthmov.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.healthyvirtuoso.android,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.healthywage,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.heiaheia,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.hekahealth.walkingchallenge.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.hekahealth.walkingchallenge.sna2,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.hevy,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.heytap.health.international,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.hltek.yaoyao,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.huami.watch.hmwatchmanager,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.humworld.humhealth,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.iamyiam.iamyiam,VIOLATION,No,P,Error,Error-file not found,Yes
+com.icare.iweight,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.icomon.onfit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.icomon.skipJoy,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.icomon.starfit.starfit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.ido.hama_fit_pro,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.ifpen.gecoair,VIOLATION,No,P,Error,Error-blank page,Yes
+com.ihealthlabs.MyVitalsPro,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.imperon.android.gymapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.incentfit.app,VIOLATION,No,P,Error,Error-file not found,Yes
+com.intercity.benchsmart,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.intercity.lipsysmart,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.intercity.missguidedsmart,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.intersales.denverbfh14,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.intersales.denversmartlifeplus,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.inutriciondeportiva.android,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.inventec.Telecarecloud,VIOLATION,No,P,Error,Error-other,Yes
+com.jeet.diety,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.jeet.healthydiet,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.jeremy.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.johnsonfitness.fitdisplay2,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.joincarbon.nutrition,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.joinembla.embla1,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.jstyles.jcring_nextring,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.julienquaglierini.programs,VIOLATION,No,P,Error,Error-other,Yes
+com.kbins.kbinsure,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.kept.triaxiom,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.kieslect.ksos,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.kingsmith.xiaojin,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.kstwatch.smartsfit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.ktbuniversity.rmutlmobile,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.kumanu.purposeful,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.lappartfitness.programs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.leadway.health,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.lebouging.app,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.lefal.mealligram,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.lefu.xin,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.levelshealth,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.lgs.horusselectpower,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.lhmedia.healthyfood.calories,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.liftosaur.www.twa,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.lillius.apptraining,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.linktop.nexring,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.linzi.sport,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.lippertlife.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.livongo.lvmobility,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.lmsporttourism.runnincity,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.lollitech.connect,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.loreal.smartoffice,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.lyfta,VIOLATION,No,P,Error,Error-blank page,Yes
+com.manridy.ectri,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.marsathletic.android.macfit.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.maximawatches.maximacurve,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.mchdactivemarionproject.activemarionproject,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.mci.mciApp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.mcs.mycoachschool,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.mctechnologies.getvealth,VIOLATION,No,P,Error,Error-file not found,Yes
+com.meditation.live,COMPLIANT,Yes,N,Intermediate page,Intermediate page,No
+com.medm.app.health,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.medm.medmbg.diary,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.medm.medmbp.diary,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.medm.medmtm.diary,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.medm.medmwt.diary,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.merit.sport,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.mile.citygem,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.miphr,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.mitone.active,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.mobileapp.weighlos,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.mobilestyx.mobilestyxapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.mobvoi.companion.at,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.momax.momaxsense.app,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.montblanc.summit.companion.android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.morpheuslife.morpheusmobile,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.motionapp.motionapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.mouwasat.mouwasatApp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.movespring,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.moving.movinglife,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.moyoung.ring.gloring,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.msa.lifesciences.glow,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.muhdo.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.munice.miraclenight_android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.mycopilot.copilotapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.myfitnesspal.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.mymojohealth.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.mysports.teams,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.mystrengthbook.sjfit,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.myworkoutplan.myworkoutplan,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.neuroflow,VIOLATION,No,P,Error,Error-file not found,Yes
+com.ninebot.segway,VIOLATION,No,P,Error,Error-blank page,No
+com.nothing.cmf.watch,VIOLATION,No,P,No response,No response,Yes
+com.nuli.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.numan.healthcare,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.nutramegapp,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.nutratech.app.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.nutrition.technologies.Fitia,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.oceanwing.smarthome,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.omantel,VIOLATION,No,P,Error,Error-other,Yes
+com.onepeloton.callisto,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.oneteamus.wellsteps,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.oplayer.ameliaaustin,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.avonsmart,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.baktivconnect,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.bfitgame,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.blaupunktcoach,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.farahsmart2,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.fitness4kids,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.forever,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.gojiactive,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.goodmansfitpro,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.harrylime,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.msmartfit,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.orunningplus,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.osport,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.radleylondon,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.reflexactive,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.silvercrestwatch,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.tikkers,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.triaclelife,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.oplayer.vict,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.organicapps.fit,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.ouraring.oura,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.ourhome.fsmobileticket,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.outdooractive.Outdooractive,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.peppermove.home.ems.training,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.physiobuddie.flexhealthapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.pingwang.elink,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.pixsterstudio.fastingapp,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.ponosoftware.p908011,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.pravisht.MhbMobile,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.pressforwardgames.cardioquest,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.preventscripts.application,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.primefit,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.prospre,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.protein2,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.proyecto.afegym,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.cmasclub.tgcustom,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.healthandlife,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.serviocio.tg,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.tupolideportivocandiles,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.valssport.tg,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.proyecto.viaaqua,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.publisherstoolbox.mlrapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.pujie.watchfaces,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.pulsetto,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.puml.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.qingniu.activiex,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.qingniu.arboleaf,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.qingniu.feelfit,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.qingniu.fitindex,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.qingniu.inevifit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.radiateandroid,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ragnarstudios.stepsense,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.randoxhealth.prod,VIOLATION,No,P,No response,No response,Yes
+com.rarejava.miwalkingpad,VIOLATION,No,P,Error,Error-blank page,Yes
+com.rcPatient,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.reactnativefirebase.gpmappspecific,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.recode.mcrriffjourney,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.recode.saintfancistotalrewards,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.relentless.trainer,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.renpho.aigym,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.renpho.health,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.resmed.myair,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.revivedna.health,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.revoola,VIOLATION,No,P,Error,Error-file not found,Yes
+com.risesci.nyx,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.rocketjourney,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.rollingstrong.tf1.prod,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ruguoapp.otterlife,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.rumble_mobile.leumit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.rumble_mobile.ovdimbari,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.rumble_mobile.yuvitalhealth,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.rumble_mobile.yuvitalorg,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.runbuddy.prod,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.runtastic.android,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.sakai.team_walk_mobile3,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.sbs.diet,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.sec.android.app.shealth,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.selantoapps.bodydiary,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.select.research.mybvi,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.selfcare.diary.mood.tracker.moodpress,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.sequent.oxygo,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.sg.dona_leb,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.shamrock.reework,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.shewellness.programs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.shinynewapp.migraineinsight2,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.signos.core,VIOLATION,No,P,No response,No response,Yes
+com.sillens.shapeupclub,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.sixtostart.zombiesrunclient,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.smartwidgetlabs.fitbitandroid,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.soccerFitYou.App,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.socialaudio.wisdom,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.soletreadmills.sole_v2,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.soundbrenner.pulse,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.sportractive,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.spotme.trars16,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+com.squats.fittr,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.sslwireless.easyhealth,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.star.customer_app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.stardust.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.steamboat.heygroop,VIOLATION,No,P,Link to unrelated pages,Get started with HC,Yes
+com.stepbet.app,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.steppi.steppifitness,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.stflatam.stfkronos,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.stridesocial.stride,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.strivebenefits,VIOLATION,No,P,Link to unrelated pages,App UI,No
+com.stronglifts.app,VIOLATION,No,P,Error,Error-blank page,Yes
+com.studio.hellohabit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.sublimed.actitens,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.svapp.release,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.sweetch,VIOLATION,No,P,No response,No response,Yes
+com.szyk.myheart,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.taejinketo.inout_webview,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.teamchallengeapps.btc,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.teamexos.exosfit,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+com.teamfit.telefonica,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.technogym.tgapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.teladoc.members,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.thestepupapp.stepup,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.timex.FamilyConnect,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.tonal.companion,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.Trainerize,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.ablecoachapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.absoluterecomp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.ampedfitness1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.anchorupfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.answersnotexcuses,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.ascensionfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.beckikeegancoaching,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.benmackey,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.bodihq,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.bootybyjake,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.campondemand,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.caseyrossfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.charlesglass,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.coachmorgan,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.committedcoaches,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.constancept,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.dannywilsonpersonalcoaching,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.dufffitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.dynamicfitnesshtx,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.echelonhealthandfitness1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.fergusonfitness2,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.fit19app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.fitnesslabonline,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.fitnesswithjoshuaray,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.fitzone247,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.functionalfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.goldsgymlovelandcolorado,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.goldsgymwaandid,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.gondolatn,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.hannabaxterfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.inwithjen,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.ironmountainfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.jacobzemer,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.jhubbardfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.jonathanmaloneycoaching,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.jonhortonpersonaltraining,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.kellifiercefit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.lanabrewsterfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.marcojimenezfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.modoma,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.morphtransformationcenter,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.mosesfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.mtbfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.nessfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.outlasthealth,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.outrightfitnessperformance1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.ozarkwellness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.peakfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.pilatesforsports,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.primalmobility,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.rawfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.resultsgymalexandria,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.rickbrennanfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.rrelitetransformations,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.semperstronger,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.shiftandliftbylaura,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.shinebrightfitnessacademy,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.sixpackchick,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.southaustingym,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.the1coach,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.thestycollective1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.tier1fitnessandnutrition1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.tomhinepersonaltraining,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.totalbodylabtraining,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.trainnbs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.triplemnoexcuses,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.trufit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.vibrantlife,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.vigorfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.vimandvigor,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.wayoftherope,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.youfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainerize.zachgouldgolf1,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainest,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.trainingamigo.tudip.trainingamigo,VIOLATION,No,P,Error,Error-other,Yes
+com.tru.connect,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.truworth.wellnesscorner,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.tuya.smart,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.tuya.smartlife,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.tvoydnevnik,VIOLATION,No,P,Error,Error-file not found,Yes
+com.ultimate531,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.ultimateperformance.www,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+com.ultrahuman.android,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.umenoki.jp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.unibail.amstelveen2,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.urbandroid.sleep,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.urinify,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.viatom.vihealth,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.viraldevelopment.calai,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.virginpulse.virginpulse,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.virtualcoma.lootquest,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.visionwizard.eatwise,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.visionwizard.fastingapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.visionwizard.pulse,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.visionwizard.workout,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.vkontakte.android,VIOLATION,No,P,Error,Error-blank page,No
+com.volkano.active,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.volkano.tempopulse,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.volkano.trojanhealth,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.voltathletics.NativeApplication,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.vpgband.app,VIOLATION,No,P,Error,Error-other,Yes
+com.wahoofitness.fitness,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.wam.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.watchic.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.waveapp.android,VIOLATION,No,P,No response,No response,Yes
+com.waybetter.app,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.webmd.ways,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.weightloss.zero.intermittent.bodyfast.fastingtracker,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.weightwatchers.mobile,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.wellness.beyondbody,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.welltory.client.android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.wellx,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.weward,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.wholesomeyum.easyketoapp,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+com.whoop.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.widgetable.theme.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.withings.wiscale2,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.withyousport.programs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.wombatapps.carbmanager,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.workadvantage.rewards,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,No
+com.wowbody.production,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.xiaoxun.xunoversea.mibrofit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.xtheon.teamfit,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.yc.fosmetfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.yc.gloryfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,No
+com.yc.gloryfitpro,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.yc.imikilife,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.yc.kospetfit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.yesfitclient,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.yf.smart.coros.dist,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+com.youloft.health,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.yu.yugrow,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+com.zhapp.infowear,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+com.zhongan.ibank,VIOLATION,No,P,Error,Error-blank page,No
+com.zoconut.dietenrich,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.zoconut.rusticwisdom,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+com.zumba.consumerapp,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+com.zurich.livewell,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+de.aoksystems.amg,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+de.walk15.pedometer,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+diet.mydiabetes,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+digifit.android.virtuagym.pro.adrenalineboutique,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.alexdelgadonl,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.blair,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.bravofitcentral,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.buzzgymsuperclub,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.cityfitness2,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.fitnessonline,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.fittertraining,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.fuse,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.getup,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.gymaddict,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.head,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.holmesplaceportugal,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.huxsport,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.lappartfitnesscaen,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.marinafitnessclub,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.pushandpullfitness,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.reseth,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.rogergracieamsterdam,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.ruckscience,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.sapiensjerez,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.sportcentrumdeviergang,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.tghfitnesscenter,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.tunturifitness,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.unifyfitness,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.walterlewisfitness,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.ymcaofgreatertoronto,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.ymcapeninsulademo,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.android.virtuagym.pro.ywcaofasheville,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+digifit.virtuagym.client.android,COMPLIANT,Yes,N,Privacy policy variants,Privacy statement,Yes
+doctorram.medlist,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+doh.health.shield,VIOLATION,No,P,HC permissions&sync request,Individual UI,No
+eka.care,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+es.as.deportesapp,VIOLATION,No,P,Error,Error-blank page,Yes
+es.b100.app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+es.biwel.Biwel,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+es.myrealfood.myrealfood,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+fi.polar.polarflow,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+fi.puolustusvoimat.marsmars,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+fit.appetit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+fit.raize.fitness.workout,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+fitbark.com.android,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+fitness.jeff.jeffnative,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+fitness.online.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+fitnesstraining.workout.stopwatch.hiit.intervaltimer,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+fr.app.beemove,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+gov.va.mobilehealth.ncptsd.cbti,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+health.galvan,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+health.lifesten.lifestenhealth,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+health.mydiabetes,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+hidratenow.com.hidrate.hidrateandroid,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+homeworkout.homeworkouts.noequipment,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+in.areno,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+in.fitpage.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+in.sweatco.app,VIOLATION,No,P,Link to unrelated pages,App UI,No
+in.yoboshu.yoboshu,VIOLATION,No,P,No response,No response,Yes
+info.moodpatterns.moodpatterns,VIOLATION,No,P,Error,Error-blank page,Yes
+io.bahuma.openscale2healthconnect,COMPLIANT,Yes,N,Intermediate page,Intermediate page,Yes
+io.beatbit.cudis,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+io.everfit.squashskill,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+io.everfit.wlbitshenleyfitness,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+io.everfit.wlstrengthspine,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+io.homeassistant.companion.android,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+ipnossoft.rma.free,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+it.kilogram,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+je.fit,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+jp.andwell,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+jp.joyfit.joyfitappandroid,VIOLATION,No,P,No response,No response,Yes
+jp.pointi.pointi_app,VIOLATION,No,P,Link to unrelated pages,HC initial system UI,Yes
+jp.pokemon.pokemonsleep,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+kr.co.hoo.gandan,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+legsworkout.slimlegs.fatburning.stronglegs,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+life.simple,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+life.startchange.goals.resolutions,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+me.sleep.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+mint.woman.female.workout,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+musclemonster.fitness.workout.home.gym.planner,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+net.allm.mysos,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+net.cachapa.libra,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+net.hikingbook.hikingbook,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+net.workoutinc.seven_7minutesfitness_forwomen,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+nl.appyhapps.healthsync,VIOLATION,No,P,HC permissions&sync request,Individual UI,Yes
+nl.samsonit.vanmoofapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+no.miahealth.mia,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+nz.co.strongher,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+one.slumber.client,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes
+one.universal.universalone,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+org.ascaconferences.app,VIOLATION,No,P,Error,Error-file not found,Yes
+org.brainhealth.bhp_android,VIOLATION,No,P,No response,No response,Yes
+org.bryanjohnson.blueprint,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+org.digitalcure.ccnf.gout2,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+org.freepoc.wearlogger,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+org.howwefeel.moodmeter,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+org.iggymedia.periodtracker,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+org.kustom.wallpaper,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+org.kustom.widget,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+org.llif.mylife,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+org.tammyhembrow,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+org.treekly.app,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+pl.com.garett.app,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+pl.lifebite.iyoni,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+rebel.fitness,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+ru.health_diet,VIOLATION,No,P,Error,Error-file not found,Yes
+ru.stayfitt.rnmobileapp,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+se.dynamicpace.app.production,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+se.formsatsningen,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+se.wellr.reboot,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+si.inova.impactwrap.oneplatform,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+so.obvio.lina,COMPLIANT,Yes,N,Privacy policy,Privacy policy,Yes
+sp.repcount,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+th.mi.rta.smartsoldiers,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+tk.glucodata,VIOLATION,No,P,Link to unrelated pages,Unrelated pages other,Yes
+tv.boon.bootcamps,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+tv.fiit.app,COMPLIANT,Yes,N,Privacy policy variants,Unique statement,Yes
+tw.gov.ntpc.imc.newtaipay,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+uni.cbum,VIOLATION,No,P,Link to unrelated pages,App UI,Yes
+weightwatchers.diet.tracker,VIOLATION,No,P,HC permissions&sync request,Shared template,Yes
+yumuuv.android.live,COMPLIANT,Yes,N,Privacy policy variants,Privacy notice&Term of use,Yes

@@ -1,0 +1,497 @@
+// ==== MainActivity.java ====
+
+package com.msa.lifesciences.glow;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.widget.Toast;
+import androidx.activity.compose.ComponentActivityKt;
+import androidx.compose.runtime.Composer;
+import androidx.compose.runtime.ComposerImpl;
+import androidx.compose.runtime.DisposableEffectResult;
+import androidx.compose.runtime.DisposableEffectScope;
+import androidx.compose.runtime.RecomposeScopeImpl;
+import androidx.compose.runtime.Updater;
+import androidx.compose.ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.core.splashscreen.SplashScreen;
+import androidx.lifecycle.LifecycleOwnerKt;
+import androidx.work.NetworkType$EnumUnboxingLocalUtility;
+import com.google.android.gms.tasks.Task;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.zzb;
+import com.google.android.play.core.install.InstallState;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.google.gson.stream.JsonToken$EnumUnboxingLocalUtility;
+import com.msa.lifesciences.glow.domain.repository.GlowRepository;
+import com.msa.lifesciences.glow.services.backgroundservices.HealthConnectBackgroundService;
+import com.msa.lifesciences.glow.services.threading.DispatchProvider;
+import com.msa.lifesciences.glow.utils.Utils;
+import com.msa.lifesciences.glow.utils.dataclasses.NetworkConnectivityObserver;
+import com.msa.lifesciences.glow.viewmodels.MainActivityViewModel;
+import java.text.DecimalFormatSymbols;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Currency;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.TimeZone;
+import kotlin.Unit;
+import kotlin.coroutines.EmptyCoroutineContext;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.random.RandomKt;
+import kotlin.text.RegexKt;
+import kotlinx.coroutines.Dispatchers;
+import kotlinx.coroutines.JobKt;
+import okhttp3.ConnectionPool;
+
+/* loaded from: classes.dex */
+public final class MainActivity extends Hilt_MainActivity {
+    public static final /* synthetic */ int $r8$clinit = 0;
+    private String androidID;
+    private AppUpdateManager appUpdateManager;
+    private NetworkConnectivityObserver connectivityObserver;
+    private FirebaseCrashlytics crashlytics;
+    public DispatchProvider dispatchers;
+    public FirebaseAnalytics firebaseAnalytics;
+    private MainActivityViewModel mainActivityViewModel;
+    public GlowRepository repo;
+    private int updateType;
+    private final String tag = "MainActivity";
+    private final MainActivity$$ExternalSyntheticLambda2 installStateUpdateListener = new MainActivity$$ExternalSyntheticLambda2(this);
+
+    public static void $r8$lambda$7kuc4OjYXdDPxgxuY6N7Penaavo(MainActivity mainActivity, InstallState installState) {
+        Intrinsics.checkNotNullParameter("this$0", mainActivity);
+        Intrinsics.checkNotNullParameter("state", installState);
+        int installStatus = installState.installStatus();
+        Utils.LOG log = Utils.LOG.DEBUG;
+        String str = mainActivity.tag;
+        if (installStatus == 10) {
+            Utils utils = Utils.INSTANCE;
+            Utils.log(log, str, "Update REQUIRES_UI_INTENT");
+            return;
+        }
+        if (installStatus == 11) {
+            MainActivityViewModel mainActivityViewModel = mainActivity.mainActivityViewModel;
+            if (mainActivityViewModel == null) {
+                Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                throw null;
+            }
+            mainActivityViewModel.updateDisplayed(false);
+            Toast.makeText(mainActivity.getApplicationContext(), "Download Successful, Restarting app in 5 seconds.", 1).show();
+            JobKt.launch$default(LifecycleOwnerKt.getLifecycleScope(mainActivity), null, 0, new MainActivity$installStateUpdateListener$1$1(mainActivity, null), 3);
+            return;
+        }
+        switch (installStatus) {
+            case 0:
+                Utils utils2 = Utils.INSTANCE;
+                Utils.log(log, str, "Update UNKNOWN");
+                return;
+            case 1:
+                Utils utils3 = Utils.INSTANCE;
+                Utils.log(log, str, "Update PENDING");
+                return;
+            case 2:
+                MainActivityViewModel mainActivityViewModel2 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel2 == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+                mainActivityViewModel2.updateDisplayed(true);
+                MainActivityViewModel mainActivityViewModel3 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel3 == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+                mainActivityViewModel3.updateView("DOWNLOADING");
+                MainActivityViewModel mainActivityViewModel4 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel4 != null) {
+                    mainActivityViewModel4.updateDownloader(installState.bytesDownloaded(), installState.totalBytesToDownload());
+                    return;
+                } else {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+            case 3:
+                MainActivityViewModel mainActivityViewModel5 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel5 == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+                mainActivityViewModel5.updateDisplayed(true);
+                MainActivityViewModel mainActivityViewModel6 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel6 == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+                mainActivityViewModel6.updateView("INSTALLING");
+                Utils utils4 = Utils.INSTANCE;
+                Utils.log(log, str, "Update INSTALLING");
+                return;
+            case 4:
+                Utils utils5 = Utils.INSTANCE;
+                Utils.log(log, str, "Update INSTALLED");
+                MainActivityViewModel mainActivityViewModel7 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel7 != null) {
+                    mainActivityViewModel7.updateDisplayed(false);
+                    return;
+                } else {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+            case 5:
+                Utils utils6 = Utils.INSTANCE;
+                Utils.log(log, str, "Update FAILED");
+                MainActivityViewModel mainActivityViewModel8 = mainActivity.mainActivityViewModel;
+                if (mainActivityViewModel8 != null) {
+                    mainActivityViewModel8.updateView("FAILED");
+                    return;
+                } else {
+                    Intrinsics.throwUninitializedPropertyAccessException("mainActivityViewModel");
+                    throw null;
+                }
+            case 6:
+                Utils utils7 = Utils.INSTANCE;
+                Utils.log(log, str, "Update Cancelled");
+                return;
+            default:
+                return;
+        }
+    }
+
+    /* renamed from: $r8$lambda$lG4-CaipYNFMrxS5wpYJ5tu7GAw, reason: not valid java name */
+    public static void m1316$r8$lambda$lG4CaipYNFMrxS5wpYJ5tu7GAw(MainActivity mainActivity) {
+        Intrinsics.checkNotNullParameter("this$0", mainActivity);
+        Utils utils = Utils.INSTANCE;
+        Utils.log(Utils.LOG.DEBUG, mainActivity.tag, "App Update Cancelled");
+    }
+
+    /* renamed from: $r8$lambda$lK74tatICp-sld8ARE9zREj_vpg, reason: not valid java name */
+    public static void m1317$r8$lambda$lK74tatICpsld8ARE9zREj_vpg(MainActivity mainActivity, Exception exc) {
+        Intrinsics.checkNotNullParameter("this$0", mainActivity);
+        Intrinsics.checkNotNullParameter("it", exc);
+        Utils utils = Utils.INSTANCE;
+        Utils.log(Utils.LOG.DEBUG, mainActivity.tag, "App Update Failed");
+    }
+
+    public static final void access$checkForAppUpdates(MainActivity mainActivity) {
+        AppUpdateManager appUpdateManager = mainActivity.appUpdateManager;
+        if (appUpdateManager == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("appUpdateManager");
+            throw null;
+        }
+        Task appUpdateInfo = appUpdateManager.getAppUpdateInfo();
+        appUpdateInfo.addOnSuccessListener(new MainActivity$$ExternalSyntheticLambda0(0, new MainActivity$onResume$2(mainActivity, 1)));
+        appUpdateInfo.addOnCanceledListener(new MainActivity$$ExternalSyntheticLambda1(mainActivity));
+        appUpdateInfo.addOnFailureListener(new MainActivity$$ExternalSyntheticLambda1(mainActivity));
+    }
+
+    public static final /* synthetic */ Activity access$findActivity(MainActivity mainActivity, Context context) {
+        mainActivity.getClass();
+        return findActivity(context);
+    }
+
+    private static Activity findActivity(Context context) {
+        if (context instanceof Activity) {
+            return (Activity) context;
+        }
+        if (!(context instanceof ContextWrapper)) {
+            return null;
+        }
+        Context baseContext = ((ContextWrapper) context).getBaseContext();
+        Intrinsics.checkNotNullExpressionValue("baseContext", baseContext);
+        return findActivity(baseContext);
+    }
+
+    public final void LockScreenOrientation(final int i, Composer composer, final int i2) {
+        ComposerImpl composerImpl = (ComposerImpl) composer;
+        composerImpl.startRestartGroup(-1819572900);
+        final Context context = (Context) composerImpl.consume(AndroidCompositionLocals_androidKt.getLocalContext());
+        Updater.DisposableEffect(Unit.INSTANCE, new Function1() { // from class: com.msa.lifesciences.glow.MainActivity$LockScreenOrientation$1
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            {
+                super(1);
+            }
+
+            @Override // kotlin.jvm.functions.Function1
+            public final Object invoke(Object obj) {
+                Intrinsics.checkNotNullParameter("$this$DisposableEffect", (DisposableEffectScope) obj);
+                final Activity access$findActivity = MainActivity.access$findActivity(MainActivity.this, context);
+                if (access$findActivity == null) {
+                    return new DisposableEffectResult() { // from class: com.msa.lifesciences.glow.MainActivity$LockScreenOrientation$1$invoke$$inlined$onDispose$1
+                        @Override // androidx.compose.runtime.DisposableEffectResult
+                        public final void dispose() {
+                        }
+                    };
+                }
+                final int requestedOrientation = access$findActivity.getRequestedOrientation();
+                access$findActivity.setRequestedOrientation(i);
+                return new DisposableEffectResult() { // from class: com.msa.lifesciences.glow.MainActivity$LockScreenOrientation$1$invoke$$inlined$onDispose$2
+                    @Override // androidx.compose.runtime.DisposableEffectResult
+                    public final void dispose() {
+                        access$findActivity.setRequestedOrientation(requestedOrientation);
+                    }
+                };
+            }
+        }, composerImpl);
+        RecomposeScopeImpl endRestartGroup = composerImpl.endRestartGroup();
+        if (endRestartGroup == null) {
+            return;
+        }
+        endRestartGroup.updateScope(new Function2() { // from class: com.msa.lifesciences.glow.MainActivity$LockScreenOrientation$2
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            {
+                super(2);
+            }
+
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(Object obj, Object obj2) {
+                ((Number) obj2).intValue();
+                int updateChangedFlags = Updater.updateChangedFlags(i2 | 1);
+                MainActivity.this.LockScreenOrientation(i, (Composer) obj, updateChangedFlags);
+                return Unit.INSTANCE;
+            }
+        });
+    }
+
+    public final String getTag() {
+        return this.tag;
+    }
+
+    @Override // androidx.activity.ComponentActivity, android.app.Activity
+    protected final void onActivityResult(int i, int i2, Intent intent) {
+        super.onActivityResult(i, i2, intent);
+        Utils.LOG log = Utils.LOG.INFO;
+        String str = this.tag;
+        if (i2 == -1) {
+            if (i == 1001) {
+                Utils utils = Utils.INSTANCE;
+                Utils.log(log, str, "GoogleFit permissions granted");
+            }
+            if (i == 198442) {
+                Utils utils2 = Utils.INSTANCE;
+                Utils.log(log, str, "In-app-update successful");
+                return;
+            }
+            return;
+        }
+        if (i2 == 0) {
+            if (i == 1001) {
+                Utils utils3 = Utils.INSTANCE;
+                Utils.log(log, str, "GoogleFit permissions denied");
+            }
+            if (i == 198442) {
+                Utils utils4 = Utils.INSTANCE;
+                Utils.log(log, str, "In-app-update canceled");
+                return;
+            }
+            return;
+        }
+        String trimIndent = RegexKt.trimIndent("\n            Request code was: " + i + "\n            Result code was: " + i2 + "\n        ");
+        Utils utils5 = Utils.INSTANCE;
+        Utils.log(Utils.LOG.ERROR, str, trimIndent);
+    }
+
+    @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    protected final void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        AppUpdateManager create = zzb.create(getApplicationContext());
+        Intrinsics.checkNotNullExpressionValue("create(applicationContext)", create);
+        this.appUpdateManager = create;
+        Context applicationContext = getApplicationContext();
+        Intrinsics.checkNotNullExpressionValue("applicationContext", applicationContext);
+        this.connectivityObserver = new NetworkConnectivityObserver(applicationContext);
+        SplashScreen splashScreen = new SplashScreen(this);
+        splashScreen.impl.install();
+        String string = Settings.Secure.getString(getContentResolver(), "android_id");
+        Intrinsics.checkNotNullExpressionValue("getString(contentResolver, Secure.ANDROID_ID)", string);
+        this.androidID = string;
+        FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        Intrinsics.checkNotNullExpressionValue("getInstance(this)", firebaseAnalytics);
+        this.firebaseAnalytics = firebaseAnalytics;
+        FirebaseCrashlytics firebaseCrashlytics = FirebaseCrashlytics.getInstance();
+        Intrinsics.checkNotNullExpressionValue("getInstance()", firebaseCrashlytics);
+        this.crashlytics = firebaseCrashlytics;
+        String str = this.androidID;
+        if (str == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("androidID");
+            throw null;
+        }
+        firebaseCrashlytics.setUserId(str);
+        Utils utils = Utils.INSTANCE;
+        Date time = Calendar.getInstance().getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyy HH:mm:ss", Locale.getDefault());
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String format = simpleDateFormat.format(time);
+        simpleDateFormat.setTimeZone(TimeZone.getDefault());
+        Utils.log(Utils.LOG.DEBUG, "GlowUtils", NetworkType$EnumUnboxingLocalUtility.m("Local Time: ", simpleDateFormat.format(time), " GMT Time: ", format));
+        FirebaseAnalytics firebaseAnalytics2 = this.firebaseAnalytics;
+        if (firebaseAnalytics2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("firebaseAnalytics");
+            throw null;
+        }
+        ConnectionPool connectionPool = new ConnectionPool(13, 0);
+        connectionPool.param("screen_name", "Splash_screen");
+        connectionPool.param("screen_class", "Splash_screen");
+        firebaseAnalytics2.logEvent("screen_view", connectionPool.getBundle());
+        JobKt.runBlocking(EmptyCoroutineContext.INSTANCE, new MainActivity$checkUpdateStatus$1(this, null));
+        ComponentActivityKt.setContent$default(this, RandomKt.composableLambdaInstance(-1766862360, new MainActivity$onCreate$2(this, splashScreen, 0), true));
+    }
+
+    @Override // android.app.Activity
+    protected final void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent(getApplicationContext(), (Class<?>) HealthConnectBackgroundService.class);
+        intent.setAction("ACTION_STOP");
+        startService(intent);
+        if (this.updateType == 0) {
+            AppUpdateManager appUpdateManager = this.appUpdateManager;
+            if (appUpdateManager != null) {
+                appUpdateManager.unregisterListener(this.installStateUpdateListener);
+            } else {
+                Intrinsics.throwUninitializedPropertyAccessException("appUpdateManager");
+                throw null;
+            }
+        }
+    }
+
+    @Override // android.app.Activity
+    protected final void onPause() {
+        super.onPause();
+        Utils utils = Utils.INSTANCE;
+        Utils.log(Utils.LOG.DEBUG, this.tag, "onPause");
+        if (this.updateType == 1) {
+            AppUpdateManager appUpdateManager = this.appUpdateManager;
+            if (appUpdateManager != null) {
+                appUpdateManager.unregisterListener(this.installStateUpdateListener);
+            } else {
+                Intrinsics.throwUninitializedPropertyAccessException("appUpdateManager");
+                throw null;
+            }
+        }
+    }
+
+    @Override // android.app.Activity
+    protected final void onResume() {
+        String currencyCode;
+        String symbol;
+        Character valueOf;
+        Character valueOf2;
+        String country;
+        int i;
+        boolean z;
+        super.onResume();
+        String string = Settings.Secure.getString(getApplication().getContentResolver(), "android_id");
+        TimeZone timeZone = Calendar.getInstance().getTimeZone();
+        Locale locale = Locale.getDefault();
+        int i2 = Build.VERSION.SDK_INT;
+        String language = locale.getLanguage();
+        int i3 = 0;
+        try {
+            Currency currency = Currency.getInstance(locale);
+            currencyCode = currency.getCurrencyCode();
+            symbol = currency.getSymbol();
+            DecimalFormatSymbols decimalFormatSymbols = DecimalFormatSymbols.getInstance(locale);
+            valueOf = Character.valueOf(decimalFormatSymbols.getGroupingSeparator());
+            valueOf2 = Character.valueOf(decimalFormatSymbols.getDecimalSeparator());
+            country = getResources().getConfiguration().getLocales().get(0).getCountry();
+        } catch (IllegalArgumentException unused) {
+            Locale locale2 = locale.getCountry().equals("en") ? new Locale("en", "US") : locale.getCountry().equals("es") ? new Locale("es", "ES") : new Locale(locale.getLanguage(), "US");
+            Currency currency2 = Currency.getInstance(locale2);
+            currencyCode = currency2.getCurrencyCode();
+            symbol = currency2.getSymbol();
+            DecimalFormatSymbols decimalFormatSymbols2 = DecimalFormatSymbols.getInstance(locale2);
+            valueOf = Character.valueOf(decimalFormatSymbols2.getGroupingSeparator());
+            valueOf2 = Character.valueOf(decimalFormatSymbols2.getDecimalSeparator());
+            country = getResources().getConfiguration().getLocales().get(0).getCountry();
+        }
+        Utils utils = Utils.INSTANCE;
+        Utils.LOG log = Utils.LOG.DEBUG;
+        String str = this.tag;
+        Utils.log(log, str, "GlowHealth");
+        Utils.log(log, str, "OS version: " + i2);
+        Utils.log(log, str, "App version: 1.0.6");
+        Utils.log(log, str, "Build version: 826");
+        Utils.log(log, str, "Current Local: " + country);
+        Utils.log(log, str, "Language: " + language);
+        Utils.log(log, str, "Currency code: " + currencyCode + "   ");
+        Utils.log(log, str, "Currency symbol: " + symbol + "   ");
+        Utils.log(log, str, "Grouping separator: " + valueOf + "   ");
+        Utils.log(log, str, "Decimal Separator: " + valueOf2 + "   ");
+        JsonToken$EnumUnboxingLocalUtility.m("Time Zone version: ", timeZone.getID(), log, str);
+        FirebaseCrashlytics firebaseCrashlytics = this.crashlytics;
+        if (firebaseCrashlytics == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("crashlytics");
+            throw null;
+        }
+        String str2 = this.androidID;
+        if (str2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("androidID");
+            throw null;
+        }
+        firebaseCrashlytics.setUserId(str2);
+        String id = timeZone.getID();
+        StringBuilder sb = new StringBuilder("GlowHealth:1.0.6:826:Android:");
+        sb.append(i2);
+        sb.append(":");
+        sb.append(country);
+        sb.append(":");
+        NetworkType$EnumUnboxingLocalUtility.m(sb, language, ":", currencyCode, ":");
+        sb.append(symbol);
+        sb.append(":");
+        sb.append(valueOf);
+        sb.append(":");
+        sb.append(valueOf2);
+        sb.append(":");
+        sb.append(id);
+        String sb2 = sb.toString();
+        if (this.dispatchers == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("dispatchers");
+            throw null;
+        }
+        JobKt.runBlocking(EmptyCoroutineContext.INSTANCE, new MainActivity$environmentUpdate$1(JobKt.launch$default(JobKt.CoroutineScope(Dispatchers.getIO()), null, 0, new MainActivity$environmentUpdate$job$1(this, string, sb2, null), 3), null));
+        Object systemService = getSystemService("activity");
+        Intrinsics.checkNotNull("null cannot be cast to non-null type android.app.ActivityManager", systemService);
+        Iterator<ActivityManager.RunningServiceInfo> it = ((ActivityManager) systemService).getRunningServices(Integer.MAX_VALUE).iterator();
+        while (true) {
+            i = 1;
+            if (!it.hasNext()) {
+                z = false;
+                break;
+            } else {
+                if (Intrinsics.areEqual(HealthConnectBackgroundService.class.getName(), it.next().service.getClassName())) {
+                    z = true;
+                    break;
+                }
+            }
+        }
+        if (z) {
+            Utils utils2 = Utils.INSTANCE;
+            Utils.log(log, str, "HealthConnectBackgroundService is already running");
+        } else {
+            Intent intent = new Intent(getApplicationContext(), (Class<?>) HealthConnectBackgroundService.class);
+            intent.setAction("ACTION_START");
+            startService(intent);
+        }
+        if (this.updateType == 1) {
+            AppUpdateManager appUpdateManager = this.appUpdateManager;
+            if (appUpdateManager != null) {
+                appUpdateManager.getAppUpdateInfo().addOnSuccessListener(new MainActivity$$ExternalSyntheticLambda0(i, new MainActivity$onResume$2(this, i3)));
+            } else {
+                Intrinsics.throwUninitializedPropertyAccessException("appUpdateManager");
+                throw null;
+            }
+        }
+    }
+}
+
+

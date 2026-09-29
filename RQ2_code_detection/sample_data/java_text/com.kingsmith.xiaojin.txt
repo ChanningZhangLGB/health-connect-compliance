@@ -1,0 +1,262 @@
+// ==== MainActivity.java ====
+
+package com.kingsmith.xiaojin;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import androidx.media3.exoplayer.ExoPlayer;
+import com.google.gson.Gson;
+import com.kingsmith.xiaojin.MainActivity;
+import io.flutter.embedding.android.FlutterFragmentActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugin.common.MethodChannel;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* compiled from: MainActivity.kt */
+/* loaded from: classes4.dex */
+public final class MainActivity extends FlutterFragmentActivity {
+    private MethodChannel appChannel;
+    private MethodChannel channel;
+    private HomeWidget homeWidget;
+    private boolean isNewIntent;
+
+    @Nullable
+    private String widgetType;
+
+    @NotNull
+    private String tag = "HomeWidgetChannel";
+
+    @NotNull
+    private final String CHANNEL = "HomeWidgetChannel";
+
+    @NotNull
+    private String action = "es.antonborri.home_widget.action.LAUNCH";
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void configureFlutterEngine$lambda$0(MainActivity this$0, MethodCall method, MethodChannel.Result result) {
+        Intrinsics.checkNotNullParameter(this$0, "this$0");
+        Intrinsics.checkNotNullParameter(method, "method");
+        Intrinsics.checkNotNullParameter(result, "result");
+        Log.e(this$0.tag, " setMethodCallHandler: " + method.method);
+        if (!Intrinsics.areEqual(method.method, "widgetChannelNotify") || this$0.isNewIntent || this$0.widgetType == null) {
+            return;
+        }
+        if (this$0.homeWidget == null) {
+            this$0.homeWidget = new HomeWidget();
+        }
+        HomeWidget homeWidget = this$0.homeWidget;
+        HomeWidget homeWidget2 = null;
+        if (homeWidget == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+            homeWidget = null;
+        }
+        String str = this$0.widgetType;
+        Intrinsics.checkNotNull(str, "null cannot be cast to non-null type kotlin.String");
+        homeWidget.setHomeWidgetType(str);
+        String str2 = this$0.tag;
+        StringBuilder sb = new StringBuilder();
+        sb.append(" onCreate: ");
+        Intent intent = this$0.getIntent();
+        sb.append(intent != null ? intent.getAction() : null);
+        sb.append(" onNewIntent type: ");
+        Intent intent2 = this$0.getIntent();
+        sb.append(intent2 != null ? intent2.getType() : null);
+        sb.append(",,,");
+        Gson gson = new Gson();
+        HomeWidget homeWidget3 = this$0.homeWidget;
+        if (homeWidget3 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+            homeWidget3 = null;
+        }
+        sb.append(gson.toJson(homeWidget3));
+        Log.e(str2, sb.toString());
+        Thread.sleep(ExoPlayer.DEFAULT_DETACH_SURFACE_TIMEOUT_MS);
+        Log.e(this$0.tag, " 休眠2秒发送");
+        MethodChannel methodChannel = this$0.channel;
+        if (methodChannel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("channel");
+            methodChannel = null;
+        }
+        Gson gson2 = new Gson();
+        HomeWidget homeWidget4 = this$0.homeWidget;
+        if (homeWidget4 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+        } else {
+            homeWidget2 = homeWidget4;
+        }
+        methodChannel.invokeMethod("HomeWidgetJumpType", gson2.toJson(homeWidget2));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void configureFlutterEngine$lambda$1(MainActivity this$0) {
+        Uri data;
+        Uri data2;
+        Intrinsics.checkNotNullParameter(this$0, "this$0");
+        String str = this$0.tag;
+        StringBuilder sb = new StringBuilder();
+        sb.append("configureFlutterEngine data: ");
+        Intent intent = this$0.getIntent();
+        String str2 = null;
+        sb.append((intent == null || (data2 = intent.getData()) == null) ? null : data2.getQuery());
+        Log.e(str, sb.toString());
+        MethodChannel methodChannel = this$0.appChannel;
+        if (methodChannel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("appChannel");
+            methodChannel = null;
+        }
+        Intent intent2 = this$0.getIntent();
+        if (intent2 != null && (data = intent2.getData()) != null) {
+            str2 = data.getQuery();
+        }
+        methodChannel.invokeMethod("eventFromNative", str2);
+    }
+
+    @Override // io.flutter.embedding.android.FlutterFragmentActivity, io.flutter.embedding.android.FlutterEngineConfigurator
+    public void configureFlutterEngine(@NotNull FlutterEngine flutterEngine) {
+        Intrinsics.checkNotNullParameter(flutterEngine, "flutterEngine");
+        flutterEngine.getPlugins().add(new UMHelperPlugin());
+        super.configureFlutterEngine(flutterEngine);
+        this.channel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), this.CHANNEL);
+        this.appChannel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), "app_channel");
+        String str = this.tag;
+        StringBuilder sb = new StringBuilder();
+        sb.append("configureFlutterEngine intent");
+        Intent intent = getIntent();
+        sb.append(intent != null ? intent.getAction() : null);
+        sb.append(" onNewIntent data: ");
+        Intent intent2 = getIntent();
+        sb.append(intent2 != null ? intent2.getData() : null);
+        Log.e(str, sb.toString());
+        MethodChannel methodChannel = this.channel;
+        if (methodChannel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("channel");
+            methodChannel = null;
+        }
+        methodChannel.setMethodCallHandler(new MethodChannel.MethodCallHandler() { // from class: w.a
+            @Override // io.flutter.plugin.common.MethodChannel.MethodCallHandler
+            public final void onMethodCall(MethodCall methodCall, MethodChannel.Result result) {
+                MainActivity.configureFlutterEngine$lambda$0(MainActivity.this, methodCall, result);
+            }
+        });
+        Intent intent3 = getIntent();
+        Uri data = intent3 != null ? intent3.getData() : null;
+        String host = data != null ? data.getHost() : null;
+        Log.e(this.tag, "MethodChannel已创建 uri: " + data + " host: " + host);
+        if (host != null && host.equals("xiaojin-eu")) {
+            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() { // from class: w.b
+                @Override // java.lang.Runnable
+                public final void run() {
+                    MainActivity.configureFlutterEngine$lambda$1(MainActivity.this);
+                }
+            }, ExoPlayer.DEFAULT_DETACH_SURFACE_TIMEOUT_MS);
+        }
+    }
+
+    @NotNull
+    public final String getTag() {
+        return this.tag;
+    }
+
+    @Override // io.flutter.embedding.android.FlutterFragmentActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    protected void onCreate(@Nullable Bundle bundle) {
+        super.onCreate(bundle);
+        String str = this.tag;
+        StringBuilder sb = new StringBuilder();
+        sb.append("MainActivity onCreate");
+        Intent intent = getIntent();
+        sb.append(intent != null ? intent.getAction() : null);
+        sb.append(" onNewIntent data: ");
+        Intent intent2 = getIntent();
+        sb.append(intent2 != null ? intent2.getData() : null);
+        Log.e(str, sb.toString());
+        Intent intent3 = getIntent();
+        if (Intrinsics.areEqual(intent3 != null ? intent3.getAction() : null, this.action)) {
+            Intent intent4 = getIntent();
+            this.widgetType = String.valueOf(intent4 != null ? intent4.getType() : null);
+        }
+    }
+
+    @Override // io.flutter.embedding.android.FlutterFragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
+    protected void onNewIntent(@NotNull Intent intent) {
+        Intrinsics.checkNotNullParameter(intent, "intent");
+        super.onNewIntent(intent);
+        this.isNewIntent = true;
+        Log.e(this.tag, " onNewIntent: " + intent.getAction() + " onNewIntent data: " + intent.getData());
+        if (!Intrinsics.areEqual(intent.getAction(), this.action)) {
+            if (Intrinsics.areEqual(intent.getAction(), "android.intent.action.VIEW")) {
+                if (this.channel == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("channel");
+                }
+                String str = this.tag;
+                StringBuilder sb = new StringBuilder();
+                sb.append("configureFlutterEngine ACTION_VIEW data");
+                Uri data = intent.getData();
+                sb.append(data != null ? data.getQuery() : null);
+                Log.e(str, sb.toString());
+                MethodChannel methodChannel = this.channel;
+                if (methodChannel == null) {
+                    Intrinsics.throwUninitializedPropertyAccessException("channel");
+                    methodChannel = null;
+                }
+                Uri data2 = intent.getData();
+                methodChannel.invokeMethod("eventFromNative", data2 != null ? data2.getQuery() : null);
+                return;
+            }
+            return;
+        }
+        this.widgetType = String.valueOf(intent.getType());
+        if (this.homeWidget == null) {
+            this.homeWidget = new HomeWidget();
+        }
+        HomeWidget homeWidget = this.homeWidget;
+        if (homeWidget == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+            homeWidget = null;
+        }
+        String str2 = this.widgetType;
+        Intrinsics.checkNotNull(str2, "null cannot be cast to non-null type kotlin.String");
+        homeWidget.setHomeWidgetType(str2);
+        String str3 = this.tag;
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append(" onNewIntent: ");
+        sb2.append(intent.getAction());
+        sb2.append(" onNewIntent type: ");
+        sb2.append(intent.getType());
+        sb2.append(",,,");
+        Gson gson = new Gson();
+        HomeWidget homeWidget2 = this.homeWidget;
+        if (homeWidget2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+            homeWidget2 = null;
+        }
+        sb2.append(gson.toJson(homeWidget2));
+        Log.e(str3, sb2.toString());
+        MethodChannel methodChannel2 = this.channel;
+        if (methodChannel2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("channel");
+            methodChannel2 = null;
+        }
+        Gson gson2 = new Gson();
+        Object obj = this.homeWidget;
+        if (obj == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("homeWidget");
+        } else {
+            r3 = obj;
+        }
+        methodChannel2.invokeMethod("HomeWidgetJumpType", gson2.toJson(r3));
+    }
+
+    public final void setTag(@NotNull String str) {
+        Intrinsics.checkNotNullParameter(str, "<set-?>");
+        this.tag = str;
+    }
+}
+
+

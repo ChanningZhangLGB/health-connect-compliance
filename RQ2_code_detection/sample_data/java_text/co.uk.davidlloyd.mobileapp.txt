@@ -1,0 +1,23 @@
+// ==== PermissionsRationaleActivity.java ====
+
+package co.davidlloyd.oneapp.main;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lco/davidlloyd/oneapp/main/PermissionsRationaleActivity;", "Lm/m;", "<init>", "()V", "main_prodRelease"}, k = 1, mv = {1, 9, 0})
+/* loaded from: classes2.dex */
+public final class PermissionsRationaleActivity extends m.m {
+    @Override // androidx.fragment.app.n0, androidx.activity.s, m0.n, android.app.Activity
+    public final void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.setData(Uri.parse("https://www.davidlloyd.co.uk/policy/privacy-policy/"));
+        startActivity(intent);
+        finish();
+    }
+}
+
+

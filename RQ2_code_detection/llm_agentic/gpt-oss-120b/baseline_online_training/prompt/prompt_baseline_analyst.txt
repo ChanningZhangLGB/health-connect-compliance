@@ -1,0 +1,20 @@
+You are given the contents of a Java source file below.
+
+------------ start of code ------------
+{code}
+------------ end of code ------------
+{memory}
+Please analyze and answer these two questions:
+1. Does this code implement an activity that displays app's privacy policy when the user clicks on the privacy policy link in the Health Connect permissions screen? Answer1:[Yes/No]
+2. If yes, explain the code that implements the activity. Answer2:[Explanation]
+
+and respond *only* with a JSON object with keys:
+  - "Answer1": "Yes" or "No"
+  - "Answer2": a brief explanation (or empty string if Answer1 is "No")
+
+Example of the ONLY acceptable response format:
+
+{{
+  "Answer1": "Yes",
+  "Answer2": "This activity registers a click listener on the privacy-policy link..."
+}}

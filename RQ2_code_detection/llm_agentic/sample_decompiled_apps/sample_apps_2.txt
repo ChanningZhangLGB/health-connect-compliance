@@ -1,0 +1,2 @@
+﻿com.bosch.ebike
+app.planks.workout

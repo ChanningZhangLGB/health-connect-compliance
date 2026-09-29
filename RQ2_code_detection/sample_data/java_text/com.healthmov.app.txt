@@ -1,0 +1,72 @@
+// ==== MainActivity.java ====
+
+package com.healthmov.app;
+
+import ai.nuralogix.anuraopencv.BuildConfig;
+import ai.nuralogix.anurasdk.output.lp.d;
+import ai.nuralogix.anurasdk.output.qd.q;
+import ai.nuralogix.anurasdk.output.qd.r;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\r\u0010\u000eJ\b\u0010\u0003\u001a\u00020\u0002H\u0014J\b\u0010\u0005\u001a\u00020\u0004H\u0014J\u0010\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016J\u0012\u0010\f\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0014¨\u0006\u000f"}, d2 = {"Lcom/healthmov/app/MainActivity;", "Lai/nuralogix/anurasdk/output/qd/q;", BuildConfig.FLAVOR, "I0", "Lai/nuralogix/anurasdk/output/qd/r;", "H0", "Landroid/content/res/Configuration;", "newConfig", "Lai/nuralogix/anurasdk/output/vp/j0;", "onConfigurationChanged", "Landroid/os/Bundle;", "savedInstanceState", "onCreate", "<init>", "()V", "app_release"}, k = 1, mv = {1, 9, 0})
+/* loaded from: classes2.dex */
+public final class MainActivity extends q {
+
+    public static final class a extends r {
+        a(String str) {
+            super(MainActivity.this, str);
+        }
+
+        @Override // ai.nuralogix.anurasdk.output.qd.r
+        protected Bundle f() {
+            String str;
+            try {
+                PackageInfo packageInfo = MainActivity.this.getPackageManager().getPackageInfo(MainActivity.this.getPackageName(), 0);
+                ai.nuralogix.anurasdk.output.lq.q.g(packageInfo, "getPackageInfo(...)");
+                str = packageInfo.versionName.toString();
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+                str = "4.0.0";
+            }
+            Bundle bundle = new Bundle();
+            bundle.putString("environment", "production");
+            bundle.putString("appVersion", str);
+            return bundle;
+        }
+    }
+
+    @Override // ai.nuralogix.anurasdk.output.qd.q
+    protected r H0() {
+        return new a(I0());
+    }
+
+    protected String I0() {
+        return "HealthMovVersion4";
+    }
+
+    @Override // ai.nuralogix.anurasdk.output.qd.q, ai.nuralogix.anurasdk.output.v.b, androidx.activity.ComponentActivity, android.app.Activity, android.content.ComponentCallbacks
+    public void onConfigurationChanged(Configuration configuration) {
+        ai.nuralogix.anurasdk.output.lq.q.h(configuration, "newConfig");
+        super.onConfigurationChanged(configuration);
+        Intent intent = new Intent("onConfigurationChanged");
+        intent.putExtra("newConfig", configuration);
+        sendBroadcast(intent);
+    }
+
+    @Override // ai.nuralogix.anurasdk.output.qd.q, androidx.fragment.app.f, androidx.activity.ComponentActivity, ai.nuralogix.anurasdk.output.p2.e, android.app.Activity
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        d.h(d.a, this, null, 2, null);
+        Intent intent = getIntent();
+        ai.nuralogix.anurasdk.output.lq.q.g(intent, "getIntent(...)");
+        intent.getAction();
+        intent.getData();
+    }
+}
+
+

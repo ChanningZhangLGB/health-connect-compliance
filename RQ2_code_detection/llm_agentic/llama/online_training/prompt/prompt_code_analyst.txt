@@ -1,0 +1,78 @@
+You are given the contents of a Java source file below.
+
+------------ start of code ------------
+{code}
+------------ end of code ------------
+
+Please analyze and answer these two questions:
+1. Does this code implement an activity that displays app's privacy policy when the user clicks on the privacy policy link in the Health Connect permissions screen? Answer1:[Yes/No]
+2. Explain your verdict. Answer2:[Explanation]
+   - If "Yes": explain which code implements the activity and how it displays the privacy policy.
+   - If "No": explain why the code accessible so far does not constitute sufficient evidence of a proper privacy-policy display — e.g. what is missing, which references could not be confirmed, or why the trail ends without reaching an implementation.
+
+
+Before you answer "No", consider that the code you can see so far may delegate
+the privacy-policy display to ANOTHER class (e.g. it starts another Activity,
+calls a helper/handler, or references a class that actually loads the policy).
+So when the code shown does NOT by itself implement the privacy-policy display,
+do not immediately conclude "No". Instead decide between exactly these cases:
+
+  - CONTINUE        : The examination should follow to another class to decide.
+                      Provide "next_target" = the fully-qualified (or as
+                      complete as possible) name of the single most likely next
+                      class to examine.
+  - TERMINAL_DEADEND: There is no privacy-policy display here and nothing to
+                      follow (no further class is referenced that could plausibly
+                      implement it). This means the final answer is "No".
+
+If, considering ALL the code shown to you (which may span several files), the
+privacy-policy display IS implemented, answer "Yes".
+
+A MEMORYBANK may be provided after the code: a running summary of verified
+insights, detection strategies, and recurring pitfalls distilled from previously
+analyzed apps. When it is present, treat it as reference guidance that summarizes
+prior experience — let it inform WHERE you look (which classes or links to follow)
+and HOW you weigh the evidence, and prefer strategies it marks as well-supported.
+It is guidance, not ground truth: always base your final verdict on the actual
+code shown to you, and ignore any item that does not apply to this code.
+
+respond *only* with a JSON object with keys:
+  - "Answer1": "Yes" or "No"
+  - "Answer2": a brief explanation of your verdict. REQUIRED whenever you give a
+               final verdict: for "YES" explain which code displays the policy and
+               how; for "TERMINAL_DEADEND" explain why the code seen does NOT show a
+               privacy-policy display (what is missing, which references could not be
+               confirmed, or why the trail ends). It may be empty ONLY for "CONTINUE".
+  - "Decision": one of "YES", "CONTINUE", "TERMINAL_DEADEND"
+       * use "YES"  when Answer1 is "Yes"
+       * use "CONTINUE" when you need to follow to another class
+       * use "TERMINAL_DEADEND" when Answer1 is "No" and nothing is left to follow
+  - "next_target": the class name to examine next when Decision is "CONTINUE",
+                   otherwise an empty string
+
+Example when the policy display is implemented here:
+
+{{
+  "Answer1": "Yes",
+  "Answer2": "This activity registers a click listener on the privacy-policy link...",
+  "Decision": "YES",
+  "next_target": ""
+}}
+
+Example when you must follow to another class:
+
+{{
+  "Answer1": "No",
+  "Answer2": "",
+  "Decision": "CONTINUE",
+  "next_target": "com.example.privacy.PrivacyPolicyActivity"
+}}
+
+Example when there is nothing here and nothing to follow:
+
+{{
+  "Answer1": "No",
+  "Answer2": "The rationale activity only configures the Health Connect permissions UI and references no class that loads or displays a privacy policy; no WebView, policy URL, or policy-named layout/string is reached in any code shown, so there is nothing further to follow.",
+  "Decision": "TERMINAL_DEADEND",
+  "next_target": ""
+}}

@@ -1,0 +1,178 @@
+// ==== MainActivity.java ====
+
+package co.well.wellapp;
+
+import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import co.well.wellapp.data.events.Event$Screen;
+import com.google.firebase.perf.metrics.Trace;
+import defpackage.AbstractActivityC2002da;
+import defpackage.AbstractC1349Ze0;
+import defpackage.AbstractC2675hl0;
+import defpackage.AbstractC3881pH;
+import defpackage.AbstractC4354sE;
+import defpackage.AbstractC5125x3;
+import defpackage.AbstractC5467zA0;
+import defpackage.C0614La0;
+import defpackage.C1683ba;
+import defpackage.C1763c1;
+import defpackage.C1842ca;
+import defpackage.C2396fz;
+import defpackage.C3203l2;
+import defpackage.C3271lW;
+import defpackage.C3476mm0;
+import defpackage.C4325s3;
+import defpackage.C4965w3;
+import defpackage.C5098wu;
+import defpackage.C5538zg1;
+import defpackage.D3;
+import defpackage.DO;
+import defpackage.Dj1;
+import defpackage.EO;
+import defpackage.FO;
+import defpackage.GO;
+import defpackage.HO;
+import defpackage.Hc1;
+import defpackage.IW0;
+import defpackage.Ic1;
+import defpackage.InterfaceC2723i10;
+import defpackage.JX0;
+import defpackage.Nm1;
+import defpackage.R5;
+import java.util.List;
+import kotlin.LazyThreadSafetyMode;
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\t\b\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lco/well/wellapp/MainActivity;", "Lda;", "<init>", "()V", "app_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class MainActivity extends AbstractActivityC2002da {
+    public static final /* synthetic */ int L = 0;
+    public final Object K;
+
+    public MainActivity() {
+        this.n.b.c("androidx:appcompat", new C1683ba(this));
+        o(new C1842ca(this));
+        this.K = kotlin.a.b(LazyThreadSafetyMode.m, new InterfaceC2723i10() { // from class: co.well.wellapp.MainActivity$special$$inlined$viewModel$default$1
+            {
+                super(0);
+            }
+
+            @Override // defpackage.InterfaceC2723i10
+            public final Object a() {
+                MainActivity mainActivity = MainActivity.this;
+                return AbstractC5467zA0.B(IW0.a.b(d.class), mainActivity.getViewModelStore(), null, mainActivity.getDefaultViewModelCreationExtras(), null, AbstractC3881pH.r(mainActivity), null);
+            }
+        });
+    }
+
+    @Override // androidx.fragment.app.n, androidx.view.a, android.app.Activity
+    public final void onCreate(Bundle bundle) {
+        Uri data;
+        List<String> pathSegments;
+        Trace a = C3271lW.a("activity_on_create");
+        Intent intent = getIntent();
+        AbstractC1349Ze0.r(intent, "getIntent(...)");
+        String action = intent.getAction();
+        int i = Build.VERSION.SDK_INT;
+        if (kotlin.text.c.i(action, i >= 34 ? "android.intent.action.VIEW_PERMISSION_USAGE" : "androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE", false)) {
+            Uri parse = Uri.parse("https://www.well.co/privacy");
+            AbstractC1349Ze0.r(parse, "parse(...)");
+            C5098wu.h(parse, this, Event$Screen.NotDefined.INSTANCE, null);
+            finish();
+        }
+        Ic1.Companion.getClass();
+        (i >= 31 ? new Hc1(this) : new C3476mm0(this, 16)).b();
+        androidx.view.c cVar = C5538zg1.Companion;
+        C3203l2 c3203l2 = new C3203l2(27);
+        cVar.getClass();
+        C5538zg1 c5538zg1 = new C5538zg1(0, 0, c3203l2);
+        C5538zg1 a2 = androidx.view.c.a(cVar, DO.a, DO.b);
+        View decorView = getWindow().getDecorView();
+        AbstractC1349Ze0.r(decorView, "window.decorView");
+        Resources resources = decorView.getResources();
+        AbstractC1349Ze0.r(resources, "view.resources");
+        boolean booleanValue = ((Boolean) c3203l2.invoke(resources)).booleanValue();
+        Resources resources2 = decorView.getResources();
+        AbstractC1349Ze0.r(resources2, "view.resources");
+        boolean booleanValue2 = ((Boolean) a2.c.invoke(resources2)).booleanValue();
+        EO ho = i >= 30 ? new HO() : i >= 29 ? new GO() : i >= 28 ? new FO() : new EO();
+        Window window = getWindow();
+        AbstractC1349Ze0.r(window, "window");
+        ho.b(c5538zg1, a2, window, decorView, booleanValue, booleanValue2);
+        Window window2 = getWindow();
+        AbstractC1349Ze0.r(window2, "window");
+        ho.a(window2);
+        super.onCreate(bundle);
+        if (i >= 33) {
+            AbstractC5125x3 s = s(new C4325s3(0), new C1763c1(10));
+            if (!AbstractC2675hl0.w(this, false)) {
+                s.a("android.permission.POST_NOTIFICATIONS");
+            }
+        }
+        d x = x();
+        AbstractC5125x3 s2 = s(new C4965w3(), new C0614La0(7));
+        x.getClass();
+        x.q.setActivityResultLauncher(s2);
+        Uri data2 = getIntent().getData();
+        boolean n = AbstractC1349Ze0.n((data2 == null || (pathSegments = data2.getPathSegments()) == null) ? null : (String) kotlin.collections.b.t0(pathSegments), "activate");
+        if (AbstractC4354sE.E(x().m.a())) {
+            if (n) {
+                getIntent().setData(null);
+            }
+            AbstractC1349Ze0.p(getIntent().putExtra("IS_APP_CREATED_INTENT", true));
+        } else {
+            Intent intent2 = getIntent();
+            if (intent2 != null && (data = intent2.getData()) != null) {
+                x().l(data);
+                Dj1.a.e("setViewModelDeepLinkValue() - uri = " + data, new Object[0]);
+                intent2.setData(null);
+            }
+        }
+        C2396fz c2396fz = new C2396fz(this);
+        c2396fz.setContent(new androidx.compose.runtime.internal.a(1470752076, new R5(this, 21), true));
+        setContentView(c2396fz);
+        a.stop();
+    }
+
+    @Override // defpackage.AbstractActivityC2002da, androidx.fragment.app.n, android.app.Activity
+    public final void onStart() {
+        super.onStart();
+        if (AbstractC4354sE.E(x().m.a())) {
+            return;
+        }
+        getIntent().putExtra("branch_force_new_session", true);
+        io.branch.referral.a k = io.branch.referral.b.k(this);
+        D3 d3 = new D3(this, 21);
+        Nm1.U0("InitSessionBuilder setting BranchUniversalReferralInitListener withCallback with " + d3);
+        k.a = new JX0(d3, 9);
+        Uri data = getIntent().getData();
+        Nm1.U0("InitSessionBuilder setting withData with " + data);
+        k.c = data;
+        k.a();
+    }
+
+    @Override // defpackage.AbstractActivityC2002da, androidx.fragment.app.n, android.app.Activity
+    public final void onStop() {
+        super.onStop();
+        if (isChangingConfigurations()) {
+            Dj1.a.e("Recreating Screen, due to configuration change", new Object[0]);
+        }
+    }
+
+    @Override // android.app.Activity
+    public final void onUserInteraction() {
+        x().r.f();
+    }
+
+    /* JADX WARN: Type inference failed for: r0v0, types: [java.lang.Object, yn0] */
+    public final d x() {
+        return (d) this.K.getValue();
+    }
+}
+
+

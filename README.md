@@ -1,130 +1,112 @@
 # An Empirical Study of Privacy Policy Display Compliance in Health Connect Apps
 
-Health Connect (HC) is Google’s new Android platform layer that lets mobile‑health (mHealth) apps exchange sensitive health data while giving users fine‑grained control. To make that sharing transparent, every HC‑integrating app must provide a dedicated *privacy‑rationale* Activity explaining why permissions are needed and how data will be handled.
+Code and sample data for our study of whether Android **Health Connect (HC)** apps make
+their **privacy policy** reachable and honest. Three research questions, three self-contained
+sub-projects, each with a runnable **20-app sample**:
 
-This repository contains the artifacts, code, and datasets for the **first large‑scale compliance audit** of those requirements. We analysed **673 real‑world mHealth APKs** using a pipeline that blends automated UI exploration, static code analysis, and privacy policy disclosure investigation. Our study shows that **54.8 % of apps either omit or incorrectly implement the mandated dialog**, **code-level detection framework can achieve up to 0.879 accuracy**, and that **76.3 % of privacy‑policy texts fail to justify the requested permissions**.
+| RQ | Question | Method | Folder |
+|----|----------|--------|--------|
+| **RQ1** | At runtime, does tapping *"Read privacy policy"* on the HC permission screen actually show a policy? | Dynamic ADB UI automation → screenshots | [`RQ1_ui_accessibility/`](RQ1_ui_accessibility/) |
+| **RQ2** | From the app's **code** alone, can we detect whether the policy is shown? | LLM agents (**Baseline**, **Baseline + RA-RAG**, **RA-ReAct**, **RA-ReAct + RA-RAG**) **and** an ML embedding classifier | [`RQ2_code_detection/`](RQ2_code_detection/) |
+| **RQ3** | Does the policy **text** disclose each requested permission (and explain why)? | LLM per-permission labeling of policy text | [`RQ3_policy_disclosure/`](RQ3_policy_disclosure/) |
 
-## Table of Contents
+Each sub-folder has its own README with detailed, copy-pasteable commands. This page is the
+map and the 5-minute quickstart.
 
-* [How to Use](#how-to-use)
+## Repository layout
 
-  * [Setup](#setup)
-  * [Usage](#usage)
-  
+```
+health-connect-compliance/
+├── README.md                 ← you are here
+├── requirements.txt          ← Python deps (one file for all RQs)
+├── data/
+│   ├── sample_apps_20.txt            # the shared 20-app sample (10 compliant + 10 violation)
+│   ├── sample_ground_truth_20.csv    # package, ground_truth, compliance  (Yes = policy shown)
+│   └── ground_truth_full_673.csv     # full study labels (reference)
+│
+├── RQ1_ui_accessibility/
+│   ├── scripts/hc_ui_accessibility_test.ps1   # ADB UI driver (install → navigate → screenshot → uninstall)
+│   ├── sample_apps/sample_apps_20.txt
+│   └── sample_output_screenshots/            # 20 expected result screenshots
+│
+├── RQ2_code_detection/
+│   ├── ml_embedding/         # encode.py, add_label.py, train.py (lr|rf|svm), predict.py
+│   ├── llm_agentic/          # 6 models × {Baseline, Baseline+RA-RAG, RA-ReAct, RA-ReAct+RA-RAG} + evaluate.py
+│   │   └── sample_decompiled_apps/   # 2 reconstructed apps for an end-to-end smoke test
+│   ├── case_studies/         # worked baseline-wrong → method-right examples
+│   └── sample_data/          # 20 java_text/*.txt, embeddings (labeled + unlabeled), gt subset
+│
+└── RQ3_policy_disclosure/
+    ├── rq3_pp_label.py       # LLM per-permission disclosure labeling (prompt embedded)
+    ├── eval_summarize.py, eval_compare.py
+    └── sample_data/sample_admin_labels_20.json   # 20 policy+permission records
+```
 
-## How to Use
+The **same 20 apps** appear across all three RQs, so you can follow one app end-to-end:
+its runtime screenshot (RQ1), its code-level verdict (RQ2), and its policy-text disclosure
+labels (RQ3).
 
-### Setup
-
-Install the required libraries:
+## Install
 
 ```bash
+git clone https://github.com/ChanningZhangLGB/health-connect-compliance.git && cd health-connect-compliance
+python -m venv .venv && . .venv/Scripts/activate      # Windows; use .venv/bin/activate on macOS/Linux
 pip install -r requirements.txt
 ```
 
-### Usage
+External tools (not pip): **ADB / Android platform-tools** for RQ1, and **JADX** if you
+want to decompile your own APKs for RQ2's LLM pipeline. See per-RQ READMEs.
 
-#### RQ1 UI Compliance Testing
+### API keys (RQ2 llm_agentic and RQ3 only)
 
-*RQ1* contains PowerShell scripts to automate UI testing of APKs and capture screenshots of the **Health Connect permission rationale dialog** and an input example. The scripts are intended to be run inside the Android Studio terminal (or any shell where `adb` is available in the PATH).
+Set the key(s) for the model(s) you actually run:
 
-| sub‑folder        | contents                                                                                      |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| `RQ1/UI_test_script` | PowerShell scripts to automate UI testing to capture screenshots. It installs each APK, exercises the UI, and captures screenshots of the Health Connect permission rationale dialog.     |
-| `RQ1/input_sample`   | an input json file example for running the scripts.                    |
+| env var | models |
+|---|---|
+| `GEMINI_API_KEY` | Gemini-2.5-flash |
+| `OPENAI_API_KEY` | GPT-5-mini |
+| `NVIDIA_API_KEY` | GPT-oss-120b, Llama-3.3-70B, Qwen3-80B (served via NVIDIA) |
+| `ANTHROPIC_API_KEY` | Claude-Haiku-4.5 |
 
-Running the script
+RQ1 and RQ2's ML classifier need **no** API keys.
 
-  ```bash
-  cd RQ1/UI_test_scrip
+## 5-minute quickstart (no API keys)
 
-  ./UI_testing_fully_automatic.ps1
-         
-  ./UI_testing_semi_automatic.ps1
-  ```
-
-#### 2. RQ2 ML/LLM-based Code-level Accessibility Detection
-
-*RQ2* contains two approaches for identifying whether an app correctly implements the required *privacy-rationale* Activity at the code level.
-
-| Sub-folder  | Purpose |
-|-------------|---------|
-| **`RQ2/ml`**  | Traditional machine-learning classifiers (`lr.py`, `rf.py`, `svm.py`) trained on static code embeddings. The embeddings are pre-computed and provided in `HC_apps_embeddings_GT.json`. The file `encode.py` shows the encoding method. |
-| **`RQ2/llm`** | Scripts that query large-language models to reason over raw Java source code implementing rationale activities. Includes `openAI_api_query.py`, `claude_api_call.py`, `deepseekR1_api_call.py`, and `codellama_local.py`. |
-
-Input examples are provided in both folders:  
-- **ML**: `RQ2/ml/HC_apps_embeddings_GT.json`  
-- **LLM**: `RQ2/llm/input_sample/`  
-
-* ML‑based detection
-  
-Running an experiment
-
-  ```bash
-  cd RQ2/ml/model_train
-
-  # Run one of the classifiers:
-
-  python lr.py   # Logistic Regression
-
-  python rf.py   # Random Forest
-
-  python svm.py  # Support Vector Machine
-  ```
-  
-  Each script automatically loads the pre‑computed embeddings, fits the model, prints accuracy / F1 / AUC to stdout, and writes predictions to `pred_<model>.csv`.
-
-* LLM‑based detection
-
-`RQ2/LLM_based_detection/llm.py` reads **rationale Java source files**. These input archives are hosted on our [project website](https://sites.google.com/view/privacyinmhealth/datasets) — download them and point the script to the extracted folders:
-
-Running an experiment
+**RQ2 — ML classifier on the 20-app sample:**
 ```bash
-cd RQ2/llm/llm_query
-
-# Run one of the query scripts:
-
-python claude_api_call.py
-
-python openAI_api_query.py
-
-python deepseekR1_api_call.py
-
-python codellama_local.py
+cd RQ2_code_detection/ml_embedding
+python train.py --algo rf
+python predict.py --model-path models_saved/rf/rf_hc_apps_grid.joblib
 ```
 
-The script streams model thoughts to the console and saves a JSON containing per‑app verdicts. Feel free to tweak the prompt or use a different API endpoint.
-
-
-#### 3. RQ3 Permission-Clarity & Privacy-Policy Disclosure Analysis
-
-*RQ3* provides scripts and examples for analyzing **permission clarity** and **privacy-policy disclosure** using large language models (LLMs). Specifcially, the Gemma-3 pipeline demonstrates how to process **both text and image inputs** for policy analysis.
-
-| Sub-folder        | Contents                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| `RQ3/Gemma-3`     | Examples and scripts demonstrating analysis on both text and image input |
-| `RQ3/gpt-4o-mini` | Processed examples and scripts for running lightweight GPT-4o-mini        |
-
-
-
-Running the sample analysis
-
+**RQ2 — LLM RA-locator smoke test (verifies the decompiled-input plumbing):**
 ```bash
-cd RQ3
-
-python RQ3/Gemma-3/llm_analysis.py            # try gemma-3
-
-pythoy RQ3/gpt-4o-mini/llm_analysis.py        # try gpt-4o-mini
+cd RQ2_code_detection/llm_agentic
+python utils/hc_extractor.py --input sample_decompiled_apps \
+       --applist sample_decompiled_apps/sample_apps_2.txt --output _loc --locate-only --verbose
 ```
 
+**RQ1 — UI accessibility (needs a connected device/emulator):**
+```powershell
+cd RQ1_ui_accessibility
+powershell -ExecutionPolicy Bypass -File .\scripts\hc_ui_accessibility_test.ps1 -Package app.aworld
+```
 
-Grab the complete HC‑compatible dataset from our [project website](https://sites.google.com/view/privacyinmhealth/datasets) and run the experiment to produce the JSON replicates the disclosure‑analysis numbers reported in Section 4 of the paper.
+Then add API keys and follow each README to run the LLM analysts (RQ2) and the
+policy-disclosure labeler (RQ3) on the samples.
 
+## Labels — read this once
 
-### Contributing
+Two different label polarities appear in the artifact; both are documented where used:
 
-If you’d like to contribute, please open an issue or pull request.
+- **Compliance (RQ1, RQ2-LLM, ground truth):** `compliance = Yes` / `Answer1 = "Yes"` means
+  the privacy policy **is** shown (compliant).
+- **ML positive class (RQ2-ML):** `P` = **VIOLATION** (policy *not* shown); `N` = compliant.
+  i.e. the ML "detects violations", so `P` is the opposite polarity of `compliance = Yes`.
 
-### License
+## Scope of the samples
 
-This project is licensed under the Apache 2.0 License – see the `LICENSE` file for details.
+The 20-app samples make every pipeline runnable and inspectable, but they are **not** the
+evaluation set — metrics on 20 apps are not meaningful. The paper's numbers come from the
+full corpus (673 apps for RQ2, 224 policy records for RQ3, ~1000-app UI sweep for RQ1).
+Full ground-truth labels are in `data/ground_truth_full_673.csv`.

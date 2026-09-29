@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install minimal deps (ML classifier only; no torch/openai needed for smoke)
+        run: pip install scikit-learn pandas joblib numpy
+
+      - name: Syntax-check all Python
+        run: python -m compileall -q RQ2_code_detection RQ3_policy_disclosure
+
+      - name: RQ2 LLM — RA locator smoke test (no API key)
+        working-directory: RQ2_code_detection/llm_agentic
+        run: |
+          python utils/hc_extractor.py \
+            --input sample_decompiled_apps \
+            --applist sample_decompiled_apps/sample_apps_2.txt \
+            --output _loc --locate-only --verbose
+          # fail if the two reconstructed sample apps did not both resolve
+          n=$(grep -c ',located,' _loc/ra_source_locations.csv)
+          echo "located apps: $n"
+          test "$n" = "2"
+
+      - name: RQ2 ML — train + predict on the 20-app sample
+        working-directory: RQ2_code_detection/ml_embedding
+        run: |
+          python train.py --algo rf
+          python predict.py --model-path models_saved/rf/rf_hc_apps_grid.joblib

@@ -1,0 +1,37 @@
+// ==== HealthPermissionsRationaleActivity.java ====
+
+package app.club15.ui;
+
+import Ie.p;
+import Ie.x;
+import Oe.f;
+import Y.b;
+import android.os.Bundle;
+import c.n;
+import d.AbstractC1639e;
+import w6.C3387b;
+import w6.C3388c;
+
+/* loaded from: classes.dex */
+public final class HealthPermissionsRationaleActivity extends n {
+
+    /* renamed from: N, reason: collision with root package name */
+    public static final /* synthetic */ f[] f18210N;
+
+    /* renamed from: M, reason: collision with root package name */
+    public final C3387b f18211M = C3387b.f30909b;
+
+    static {
+        p pVar = new p(HealthPermissionsRationaleActivity.class, "analyticsCollector", "getAnalyticsCollector()Lapp/club15/analytics/ui/UiAnalyticsCollector;", 0);
+        x.f5676a.getClass();
+        f18210N = new f[]{pVar};
+    }
+
+    @Override // c.n, android.app.Activity
+    public final void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        AbstractC1639e.a(this, new b(1654847729, new C3388c(this, 3), true));
+    }
+}
+
+

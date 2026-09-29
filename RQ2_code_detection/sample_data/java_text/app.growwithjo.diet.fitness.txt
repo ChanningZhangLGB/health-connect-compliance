@@ -1,0 +1,291 @@
+// ==== HealthConnectTermsActivity.java ====
+
+package pl.dietlabs.dietandtraining.fitactivities.mobile.terms;
+
+import D.E;
+import Dw.WebViewState;
+import Dw.d;
+import Dw.f;
+import K0.I;
+import M0.InterfaceC3387g;
+import P0.h;
+import android.os.Bundle;
+import androidx.compose.foundation.layout.C4387h;
+import androidx.compose.foundation.layout.C4389j;
+import androidx.compose.foundation.layout.D;
+import androidx.compose.ui.e;
+import e.C6234e;
+import k7.p;
+import kotlin.C3828C;
+import kotlin.C4961E1;
+import kotlin.C5032j;
+import kotlin.C5047o;
+import kotlin.C6978e;
+import kotlin.InterfaceC5020f;
+import kotlin.InterfaceC5038l;
+import kotlin.InterfaceC5067x;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.internal.Intrinsics;
+import om.C7941c;
+import org.jetbrains.annotations.NotNull;
+import pl.dietlabs.dietandtraining.webview.k;
+import td.n;
+import td.o;
+import ud.AbstractC8797t;
+
+/* compiled from: HealthConnectTermsActivity.kt */
+@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0007\u0010\bJ\u0019\u0010\u0005\u001a\u00020\u00042\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0014¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\t"}, d2 = {"Lpl/dietlabs/dietandtraining/fitactivities/mobile/terms/HealthConnectTermsActivity;", "Landroidx/appcompat/app/c;", "Landroid/os/Bundle;", "savedInstanceState", "", "onCreate", "(Landroid/os/Bundle;)V", "<init>", "()V", "mobile_radianceRelease"}, k = 1, mv = {1, 9, 0})
+/* loaded from: classes2.dex */
+public final class HealthConnectTermsActivity extends c {
+
+    /* compiled from: HealthConnectTermsActivity.kt */
+    @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\u000b¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "a", "(Lb0/l;I)V"}, k = 3, mv = {1, 9, 0})
+    static final class a extends AbstractC8797t implements Function2<InterfaceC5038l, Integer, Unit> {
+
+        /* compiled from: HealthConnectTermsActivity.kt */
+        @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\u000b¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "a", "(Lb0/l;I)V"}, k = 3, mv = {1, 9, 0})
+        /* renamed from: pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity$a$a, reason: collision with other inner class name */
+        static final class C2232a extends AbstractC8797t implements Function2<InterfaceC5038l, Integer, Unit> {
+
+            /* renamed from: h, reason: collision with root package name */
+            final /* synthetic */ HealthConnectTermsActivity f81187h;
+
+            /* compiled from: HealthConnectTermsActivity.kt */
+            @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\u000b¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "a", "(Lb0/l;I)V"}, k = 3, mv = {1, 9, 0})
+            /* renamed from: pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity$a$a$a, reason: collision with other inner class name */
+            static final class C2233a extends AbstractC8797t implements Function2<InterfaceC5038l, Integer, Unit> {
+
+                /* renamed from: h, reason: collision with root package name */
+                final /* synthetic */ HealthConnectTermsActivity f81188h;
+
+                /* compiled from: HealthConnectTermsActivity.kt */
+                @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\u000b¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"LD/E;", "it", "", "a", "(LD/E;Lb0/l;I)V"}, k = 3, mv = {1, 9, 0})
+                /* renamed from: pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity$a$a$a$a, reason: collision with other inner class name */
+                static final class C2234a extends AbstractC8797t implements n<E, InterfaceC5038l, Integer, Unit> {
+
+                    /* renamed from: h, reason: collision with root package name */
+                    final /* synthetic */ HealthConnectTermsActivity f81189h;
+
+                    /* compiled from: HealthConnectTermsActivity.kt */
+                    @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\u0010\u0006\u001a\u00020\u00042\u0006\u0010\u0001\u001a\u00020\u00002\u0012\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0002H\u000b¢\u0006\u0004\b\u0006\u0010\u0007"}, d2 = {"LDw/i;", "<anonymous parameter 0>", "Lkotlin/Function1;", "LDw/d;", "", "<anonymous parameter 1>", "a", "(LDw/i;Lkotlin/jvm/functions/Function1;Lb0/l;I)V"}, k = 3, mv = {1, 9, 0})
+                    /* renamed from: pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity$a$a$a$a$a, reason: collision with other inner class name */
+                    static final class C2235a extends AbstractC8797t implements o<WebViewState, Function1<? super d, ? extends Unit>, InterfaceC5038l, Integer, Unit> {
+
+                        /* renamed from: h, reason: collision with root package name */
+                        final /* synthetic */ HealthConnectTermsActivity f81190h;
+
+                        /* compiled from: HealthConnectTermsActivity.kt */
+                        @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"LDw/d;", "it", "", "a", "(LDw/d;)V"}, k = 3, mv = {1, 9, 0})
+                        /* renamed from: pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity$a$a$a$a$a$a, reason: collision with other inner class name */
+                        static final class C2236a extends AbstractC8797t implements Function1<d, Unit> {
+
+                            /* renamed from: h, reason: collision with root package name */
+                            final /* synthetic */ HealthConnectTermsActivity f81191h;
+
+                            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                            C2236a(HealthConnectTermsActivity healthConnectTermsActivity) {
+                                super(1);
+                                this.f81191h = healthConnectTermsActivity;
+                            }
+
+                            public final void a(@NotNull d it) {
+                                Intrinsics.checkNotNullParameter(it, "it");
+                                this.f81191h.onBackPressed();
+                            }
+
+                            @Override // kotlin.jvm.functions.Function1
+                            public /* bridge */ /* synthetic */ Unit invoke(d dVar) {
+                                a(dVar);
+                                return Unit.f72337a;
+                            }
+                        }
+
+                        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                        C2235a(HealthConnectTermsActivity healthConnectTermsActivity) {
+                            super(4);
+                            this.f81190h = healthConnectTermsActivity;
+                        }
+
+                        public final void a(@NotNull WebViewState anonymous$parameter$0$, @NotNull Function1<? super d, Unit> anonymous$parameter$1$, InterfaceC5038l interfaceC5038l, int i10) {
+                            Intrinsics.checkNotNullParameter(anonymous$parameter$0$, "$anonymous$parameter$0$");
+                            Intrinsics.checkNotNullParameter(anonymous$parameter$1$, "$anonymous$parameter$1$");
+                            if ((i10 & 641) == 128 && interfaceC5038l.j()) {
+                                interfaceC5038l.M();
+                                return;
+                            }
+                            if (C5047o.J()) {
+                                C5047o.S(1298618295, i10, -1, "pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity.onCreate.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous> (HealthConnectTermsActivity.kt:41)");
+                            }
+                            String d10 = h.d(C7941c.f79526a, interfaceC5038l, 0);
+                            interfaceC5038l.V(2064470942);
+                            boolean U10 = interfaceC5038l.U(this.f81190h);
+                            HealthConnectTermsActivity healthConnectTermsActivity = this.f81190h;
+                            Object B10 = interfaceC5038l.B();
+                            if (U10 || B10 == InterfaceC5038l.INSTANCE.a()) {
+                                B10 = new C2236a(healthConnectTermsActivity);
+                                interfaceC5038l.r(B10);
+                            }
+                            interfaceC5038l.P();
+                            pl.dietlabs.dietandtraining.fitactivities.mobile.terms.a.a(d10, (Function1) B10, interfaceC5038l, 0);
+                            if (C5047o.J()) {
+                                C5047o.R();
+                            }
+                        }
+
+                        @Override // td.o
+                        public /* bridge */ /* synthetic */ Unit d(WebViewState webViewState, Function1<? super d, ? extends Unit> function1, InterfaceC5038l interfaceC5038l, Integer num) {
+                            a(webViewState, function1, interfaceC5038l, num.intValue());
+                            return Unit.f72337a;
+                        }
+                    }
+
+                    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                    C2234a(HealthConnectTermsActivity healthConnectTermsActivity) {
+                        super(3);
+                        this.f81189h = healthConnectTermsActivity;
+                    }
+
+                    public final void a(@NotNull E it, InterfaceC5038l interfaceC5038l, int i10) {
+                        Intrinsics.checkNotNullParameter(it, "it");
+                        if ((i10 & 14) == 0) {
+                            i10 |= interfaceC5038l.U(it) ? 4 : 2;
+                        }
+                        if ((i10 & 91) == 18 && interfaceC5038l.j()) {
+                            interfaceC5038l.M();
+                            return;
+                        }
+                        if (C5047o.J()) {
+                            C5047o.S(2129272571, i10, -1, "pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity.onCreate.<anonymous>.<anonymous>.<anonymous>.<anonymous> (HealthConnectTermsActivity.kt:35)");
+                        }
+                        e h10 = D.h(e.INSTANCE, it);
+                        HealthConnectTermsActivity healthConnectTermsActivity = this.f81189h;
+                        I h11 = C4387h.h(n0.c.INSTANCE.o(), false);
+                        int a10 = C5032j.a(interfaceC5038l, 0);
+                        InterfaceC5067x p10 = interfaceC5038l.p();
+                        e e10 = androidx.compose.ui.c.e(interfaceC5038l, h10);
+                        InterfaceC3387g.Companion companion = InterfaceC3387g.INSTANCE;
+                        Function0<InterfaceC3387g> a11 = companion.a();
+                        if (!(interfaceC5038l.k() instanceof InterfaceC5020f)) {
+                            C5032j.c();
+                        }
+                        interfaceC5038l.H();
+                        if (interfaceC5038l.g()) {
+                            interfaceC5038l.K(a11);
+                        } else {
+                            interfaceC5038l.q();
+                        }
+                        InterfaceC5038l a12 = C4961E1.a(interfaceC5038l);
+                        C4961E1.c(a12, h11, companion.e());
+                        C4961E1.c(a12, p10, companion.g());
+                        Function2<InterfaceC3387g, Integer, Unit> b10 = companion.b();
+                        if (a12.g() || !Intrinsics.e(a12.B(), Integer.valueOf(a10))) {
+                            a12.r(Integer.valueOf(a10));
+                            a12.n(Integer.valueOf(a10), b10);
+                        }
+                        C4961E1.c(a12, e10, companion.f());
+                        C4389j c4389j = C4389j.f37219a;
+                        k.d(f.f5158s.getPrivacyPolicy(), j0.c.e(1298618295, true, new C2235a(healthConnectTermsActivity), interfaceC5038l, 54), null, interfaceC5038l, 56, 4);
+                        interfaceC5038l.t();
+                        if (C5047o.J()) {
+                            C5047o.R();
+                        }
+                    }
+
+                    @Override // td.n
+                    public /* bridge */ /* synthetic */ Unit invoke(E e10, InterfaceC5038l interfaceC5038l, Integer num) {
+                        a(e10, interfaceC5038l, num.intValue());
+                        return Unit.f72337a;
+                    }
+                }
+
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                C2233a(HealthConnectTermsActivity healthConnectTermsActivity) {
+                    super(2);
+                    this.f81188h = healthConnectTermsActivity;
+                }
+
+                public final void a(InterfaceC5038l interfaceC5038l, int i10) {
+                    if ((i10 & 11) == 2 && interfaceC5038l.j()) {
+                        interfaceC5038l.M();
+                        return;
+                    }
+                    if (C5047o.J()) {
+                        C5047o.S(-624628045, i10, -1, "pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity.onCreate.<anonymous>.<anonymous>.<anonymous> (HealthConnectTermsActivity.kt:34)");
+                    }
+                    C6978e.a(null, null, null, null, 0L, false, j0.c.e(2129272571, true, new C2234a(this.f81188h), interfaceC5038l, 54), interfaceC5038l, 1572864, 63);
+                    if (C5047o.J()) {
+                        C5047o.R();
+                    }
+                }
+
+                @Override // kotlin.jvm.functions.Function2
+                public /* bridge */ /* synthetic */ Unit invoke(InterfaceC5038l interfaceC5038l, Integer num) {
+                    a(interfaceC5038l, num.intValue());
+                    return Unit.f72337a;
+                }
+            }
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            C2232a(HealthConnectTermsActivity healthConnectTermsActivity) {
+                super(2);
+                this.f81187h = healthConnectTermsActivity;
+            }
+
+            public final void a(InterfaceC5038l interfaceC5038l, int i10) {
+                if ((i10 & 11) == 2 && interfaceC5038l.j()) {
+                    interfaceC5038l.M();
+                    return;
+                }
+                if (C5047o.J()) {
+                    C5047o.S(228380377, i10, -1, "pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity.onCreate.<anonymous>.<anonymous> (HealthConnectTermsActivity.kt:31)");
+                }
+                p.a(false, true, j0.c.e(-624628045, true, new C2233a(this.f81187h), interfaceC5038l, 54), interfaceC5038l, 432, 1);
+                if (C5047o.J()) {
+                    C5047o.R();
+                }
+            }
+
+            @Override // kotlin.jvm.functions.Function2
+            public /* bridge */ /* synthetic */ Unit invoke(InterfaceC5038l interfaceC5038l, Integer num) {
+                a(interfaceC5038l, num.intValue());
+                return Unit.f72337a;
+            }
+        }
+
+        a() {
+            super(2);
+        }
+
+        public final void a(InterfaceC5038l interfaceC5038l, int i10) {
+            if ((i10 & 11) == 2 && interfaceC5038l.j()) {
+                interfaceC5038l.M();
+                return;
+            }
+            if (C5047o.J()) {
+                C5047o.S(2141648292, i10, -1, "pl.dietlabs.dietandtraining.fitactivities.mobile.terms.HealthConnectTermsActivity.onCreate.<anonymous> (HealthConnectTermsActivity.kt:30)");
+            }
+            C3828C.a(j0.c.e(228380377, true, new C2232a(HealthConnectTermsActivity.this), interfaceC5038l, 54), interfaceC5038l, 6);
+            if (C5047o.J()) {
+                C5047o.R();
+            }
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public /* bridge */ /* synthetic */ Unit invoke(InterfaceC5038l interfaceC5038l, Integer num) {
+            a(interfaceC5038l, num.intValue());
+            return Unit.f72337a;
+        }
+    }
+
+    @Override // pl.dietlabs.dietandtraining.fitactivities.mobile.terms.c, androidx.fragment.app.i, androidx.view.j, androidx.core.app.h, android.app.Activity
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        C6234e.b(this, null, j0.c.c(2141648292, true, new a()), 1, null);
+    }
+}
+
+

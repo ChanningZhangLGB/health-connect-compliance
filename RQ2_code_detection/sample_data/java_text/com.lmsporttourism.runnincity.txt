@@ -1,0 +1,176 @@
+// ==== MainActivity.java ====
+
+package com.lmsporttourism.runnincity;
+
+import android.app.ActivityManager;
+import android.content.Context;
+import android.media.AudioManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import com.lmsporttourism.runnincity.MainActivity;
+import io.flutter.embedding.android.FlutterFragmentActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugins.GeneratedPluginRegistrant;
+import kotlin.jvm.internal.o;
+
+/* loaded from: classes3.dex */
+public final class MainActivity extends FlutterFragmentActivity {
+
+    /* renamed from: b, reason: collision with root package name */
+    private String f21901b;
+
+    /* renamed from: a, reason: collision with root package name */
+    private final String f21900a = "com.mile.runnincity/methods";
+
+    /* renamed from: c, reason: collision with root package name */
+    private final AudioManager.OnAudioFocusChangeListener f21902c = new AudioManager.OnAudioFocusChangeListener() { // from class: V7.a
+        @Override // android.media.AudioManager.OnAudioFocusChangeListener
+        public final void onAudioFocusChange(int i10) {
+            MainActivity.o(i10);
+        }
+    };
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void o(int i10) {
+        Log.i("Flutter Method Channel", "AudioManager focusChange: " + i10);
+        if (i10 == -3) {
+            Log.i("Flutter Method Channel", "AudioManager focusChange: AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK");
+            return;
+        }
+        if (i10 == -2) {
+            Log.i("Flutter Method Channel", "AudioManager focusChange: AUDIOFOCUS_LOSS_TRANSIENT");
+            return;
+        }
+        if (i10 == -1) {
+            Log.i("Flutter Method Channel", "AudioManager focusChange: AUDIOFOCUS_LOSS");
+        } else if (i10 != 1) {
+            Log.i("Flutter Method Channel", "AudioManager focusChange: AUDIOFOCUS default");
+        } else {
+            Log.i("Flutter Method Channel", "AudioManager focusChange: AUDIOFOCUS_GAIN");
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    public static final void p(MainActivity this$0, MethodCall call, MethodChannel.Result result) {
+        o.h(this$0, "this$0");
+        o.h(call, "call");
+        o.h(result, "result");
+        String str = call.method;
+        if (str != null) {
+            switch (str.hashCode()) {
+                case -1884576103:
+                    if (str.equals("lowVolumeMusicPlayingInService")) {
+                        this$0.q(this$0);
+                        result.success(Boolean.TRUE);
+                        return;
+                    }
+                    break;
+                case -1627317635:
+                    if (str.equals("isMusicPlayingInService")) {
+                        Object systemService = this$0.getSystemService("audio");
+                        o.f(systemService, "null cannot be cast to non-null type android.media.AudioManager");
+                        result.success(Boolean.valueOf(((AudioManager) systemService).isMusicActive()));
+                        return;
+                    }
+                    break;
+                case -1459919118:
+                    if (str.equals("upVolumeMusicPlayingInService")) {
+                        this$0.n(this$0);
+                        result.success(Boolean.TRUE);
+                        return;
+                    }
+                    break;
+                case 1233140062:
+                    if (str.equals("initialLink")) {
+                        String str2 = this$0.f21901b;
+                        if (str2 != null) {
+                            result.success(str2);
+                            return;
+                        }
+                        return;
+                    }
+                    break;
+                case 1235474653:
+                    if (str.equals("batteryOptimizationForBackground")) {
+                        Object systemService2 = this$0.getSystemService("activity");
+                        o.f(systemService2, "null cannot be cast to non-null type android.app.ActivityManager");
+                        result.success(Boolean.valueOf(((ActivityManager) systemService2).isBackgroundRestricted()));
+                        return;
+                    }
+                    break;
+            }
+        }
+        result.notImplemented();
+    }
+
+    @Override // io.flutter.embedding.android.FlutterFragmentActivity, io.flutter.embedding.android.FlutterEngineConfigurator
+    public void configureFlutterEngine(FlutterEngine flutterEngine) {
+        o.h(flutterEngine, "flutterEngine");
+        GeneratedPluginRegistrant.registerWith(flutterEngine);
+        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), this.f21900a).setMethodCallHandler(new MethodChannel.MethodCallHandler() { // from class: V7.b
+            @Override // io.flutter.plugin.common.MethodChannel.MethodCallHandler
+            public final void onMethodCall(MethodCall methodCall, MethodChannel.Result result) {
+                MainActivity.p(MainActivity.this, methodCall, result);
+            }
+        });
+    }
+
+    public final void n(Context ctx) {
+        o.h(ctx, "ctx");
+        Log.i("Flutter Method Channel", "abandonAudioMedia");
+        try {
+            Object systemService = ctx.getSystemService("audio");
+            o.f(systemService, "null cannot be cast to non-null type android.media.AudioManager");
+            int abandonAudioFocus = ((AudioManager) systemService).abandonAudioFocus(this.f21902c);
+            if (abandonAudioFocus == 0) {
+                Log.w("Flutter Method Channel", "AudioManager abandonAudioMedia AUDIOFOCUS_REQUEST_FAILED");
+            } else if (abandonAudioFocus != 1) {
+                Log.i("Flutter Method Channel", "AudioManager abandonAudioMedia AUDIOFOCUS default");
+            } else {
+                Log.i("Flutter Method Channel", "AudioManager abandonAudioMedia AUDIOFOCUS_REQUEST_GRANTED");
+            }
+        } catch (NullPointerException e10) {
+            Log.w("Flutter Method Channel", "abandonAudioMedia: NullPointerException");
+            e10.printStackTrace();
+        } catch (Exception e11) {
+            Log.w("Flutter Method Channel", "abandonAudioMedia: Exception");
+            e11.printStackTrace();
+        }
+    }
+
+    @Override // io.flutter.embedding.android.FlutterFragmentActivity, androidx.fragment.app.ActivityC1105t, androidx.activity.f, androidx.core.app.h, android.app.Activity
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        Uri data = getIntent().getData();
+        this.f21901b = data != null ? data.toString() : null;
+    }
+
+    public final void q(Context ctx) {
+        o.h(ctx, "ctx");
+        Log.i("Flutter Method Channel", "duckAudioMedia");
+        try {
+            Object systemService = ctx.getSystemService("audio");
+            o.f(systemService, "null cannot be cast to non-null type android.media.AudioManager");
+            int requestAudioFocus = ((AudioManager) systemService).requestAudioFocus(this.f21902c, 3, 3);
+            if (requestAudioFocus == 0) {
+                Log.w("Flutter Method Channel", "AudioManager duckAudioMedia AUDIOFOCUS_REQUEST_FAILED");
+            } else if (requestAudioFocus != 1) {
+                Log.i("Flutter Method Channel", "AudioManager duckAudioMedia AUDIOFOCUS default");
+            } else {
+                Log.i("Flutter Method Channel", "AudioManager duckAudioMedia AUDIOFOCUS_REQUEST_GRANTED");
+            }
+        } catch (NullPointerException e10) {
+            Log.w("Flutter Method Channel", "duckAudioMedia: NullPointerException");
+            e10.printStackTrace();
+        } catch (Exception e11) {
+            Log.w("Flutter Method Channel", "duckAudioMedia: Exception");
+            e11.printStackTrace();
+        }
+    }
+}
+
+

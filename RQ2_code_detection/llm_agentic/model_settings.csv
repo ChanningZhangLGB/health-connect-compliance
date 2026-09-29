@@ -1,0 +1,7 @@
+Model,Temperature,Max output tokens,Provider / endpoint
+claude-haiku-4-5-20251001,0.0,4096,Anthropic (native SDK)
+gpt-5-mini,n/a - reasoning_effort = medium,4096 (max_completion_tokens),OpenAI default (api.openai.com)
+gemini-2.5-flash-lite,0.0,4096,Google OpenAI-compat (generativelanguage.googleapis.com/v1beta/openai/)
+openai/gpt-oss-120b,0.0,4096,NVIDIA (integrate.api.nvidia.com/v1)
+qwen/qwen3-next-80b-a3b-instruct,0.0,4096,NVIDIA (integrate.api.nvidia.com/v1)
+meta/llama-3.3-70b-instruct,0.0,4096,NVIDIA (integrate.api.nvidia.com/v1)

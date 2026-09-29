@@ -1,0 +1,52 @@
+// ==== SplashActivity.java ====
+
+package com.diet.pixsterstudio.ketodietican.activity;
+
+import android.os.Bundle;
+import androidx.activity.compose.ComponentActivityKt;
+import androidx.compose.runtime.internal.ComposableLambdaKt;
+import androidx.core.view.WindowCompat;
+import com.qonversion.android.sdk.Qonversion;
+import com.qonversion.android.sdk.dto.QUser;
+import com.qonversion.android.sdk.dto.QonversionError;
+import com.qonversion.android.sdk.dto.properties.QUserPropertyKey;
+import com.qonversion.android.sdk.listeners.QonversionUserCallback;
+import dagger.hilt.android.AndroidEntryPoint;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* compiled from: SplashActivity.kt */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\t\b\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0012\u0010\u0004\u001a\u00020\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007H\u0014¨\u0006\b"}, d2 = {"Lcom/diet/pixsterstudio/ketodietican/activity/SplashActivity;", "Landroidx/activity/ComponentActivity;", "<init>", "()V", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "app_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@AndroidEntryPoint
+/* loaded from: classes2.dex */
+public final class SplashActivity extends Hilt_SplashActivity {
+    public static final int $stable = 0;
+
+    @Override // com.diet.pixsterstudio.ketodietican.activity.Hilt_SplashActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+        Qonversion.INSTANCE.getSharedInstance().userInfo(new QonversionUserCallback() { // from class: com.diet.pixsterstudio.ketodietican.activity.SplashActivity$onCreate$1
+            @Override // com.qonversion.android.sdk.listeners.QonversionUserCallback
+            public void onError(QonversionError error) {
+                Intrinsics.checkNotNullParameter(error, "error");
+            }
+
+            @Override // com.qonversion.android.sdk.listeners.QonversionUserCallback
+            public void onSuccess(QUser user) {
+                Intrinsics.checkNotNullParameter(user, "user");
+                String identityId = user.getIdentityId();
+                if (identityId != null) {
+                    Qonversion.INSTANCE.getSharedInstance().setUserProperty(QUserPropertyKey.CustomUserId, identityId);
+                }
+                String identityId2 = user.getIdentityId();
+                if (identityId2 != null) {
+                    Qonversion.INSTANCE.getSharedInstance().identify(identityId2);
+                }
+            }
+        });
+        ComponentActivityKt.setContent$default(this, null, ComposableLambdaKt.composableLambdaInstance(-1697720147, true, new SplashActivity$onCreate$2(this)), 1, null);
+    }
+}
+
+

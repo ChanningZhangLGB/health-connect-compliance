@@ -1,0 +1,47 @@
+You are a reflective practitioner reviewing a code analysis that reached the WRONG verdict.
+
+The analysis answers one question about an Android app: does the code implement an activity
+that displays the app's privacy policy when the user clicks the privacy policy link on the
+Health Connect permissions screen?
+
+Below is the full OUTPUT the code analyst produced for one app — its answer, explanation,
+decision, and the trail of classes it followed.
+
+------------ start of analysis output ------------
+[[MODEL_ANSWER]]
+------------ end of analysis output ------------
+
+The app under analysis is the package: [[CASE_PACKAGE]]
+
+This case is shown to you because the analyst's verdict was WRONG. Here is the ground-truth
+reference for the app:
+
+------------ start of ground truth ------------
+[[GROUND_TRUTH_LABEL]]
+------------ end of ground truth ------------
+
+Your job is to diagnose the mistake the analyst made and distill a concise, generalizable
+lesson that, if remembered, would help avoid the same mistake on future similar apps. A good
+lesson is about WHERE to look in the code and HOW to weigh the evidence — not a fact specific
+to this one app.
+
+Before proposing a lesson, review the existing blunder book to check whether the lesson is
+already recorded:
+
+------------ start of blunder book ------------
+[[BLUNDER BOOK]]
+------------ end of blunder book ------------
+
+Then decide:
+- If the lesson from this case is NOT yet captured in the blunder book, propose it as a new
+  insight.
+- If an existing lesson already covers this case, do not duplicate it; instead identify which
+  existing lesson(s) applied, so this app can be added to their contributors.
+
+Respond *only* with a JSON object with exactly these keys:
+
+{
+  "has_new_insight": "Yes" or "No",
+  "applied_principle": "if No: the existing lesson(s) this case applied; otherwise an empty string",
+  "proposed_insight": "if Yes: the new lesson and how it helps future cases; otherwise an empty string"
+}

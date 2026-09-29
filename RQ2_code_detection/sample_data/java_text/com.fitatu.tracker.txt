@@ -1,0 +1,177 @@
+// ==== MainActivity.java ====
+
+package com.fitatu.tracker;
+
+import android.app.Activity;
+import android.os.Bundle;
+import com.android.billingclient.api.Purchase;
+import d6.p;
+import d6.q;
+import d6.s;
+import defpackage.i;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.n;
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import vj.j;
+
+/* compiled from: MainActivity.kt */
+/* loaded from: classes.dex */
+public final class MainActivity extends io.flutter.embedding.android.g {
+    private com.android.billingclient.api.d E;
+
+    @NotNull
+    private final String D = "ft_iap";
+
+    @NotNull
+    private final List<c> F = new ArrayList();
+
+    /* compiled from: MainActivity.kt */
+    static final class a extends n implements Function0<Activity> {
+        a() {
+            super(0);
+        }
+
+        @Override // kotlin.jvm.functions.Function0
+        @NotNull
+        /* renamed from: b, reason: merged with bridge method [inline-methods] */
+        public final Activity invoke() {
+            return MainActivity.this;
+        }
+    }
+
+    /* compiled from: MainActivity.kt */
+    public static final class b implements d6.g {
+        b() {
+        }
+
+        @Override // d6.g
+        public void d(@NotNull com.android.billingclient.api.h billingResult) {
+            Intrinsics.checkNotNullParameter(billingResult, "billingResult");
+            billingResult.b();
+        }
+
+        @Override // d6.g
+        public void g() {
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void d1(MainActivity this$0, vj.i call, j.d result) {
+        Intrinsics.checkNotNullParameter(this$0, "this$0");
+        Intrinsics.checkNotNullParameter(call, "call");
+        Intrinsics.checkNotNullParameter(result, "result");
+        if (Intrinsics.a(call.f48690a, "getActiveSubscriptions")) {
+            this$0.e1(result);
+        } else {
+            result.c();
+        }
+    }
+
+    private final void e1(final j.d dVar) {
+        s a10 = s.a().b("subs").a();
+        Intrinsics.checkNotNullExpressionValue(a10, "build(...)");
+        com.android.billingclient.api.d dVar2 = this.E;
+        if (dVar2 == null) {
+            Intrinsics.o("billingClient");
+            dVar2 = null;
+        }
+        dVar2.n(a10, new p() { // from class: com.fitatu.tracker.j
+            @Override // d6.p
+            public final void a(com.android.billingclient.api.h hVar, List list) {
+                MainActivity.f1(j.d.this, hVar, list);
+            }
+        });
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void f1(j.d result, com.android.billingclient.api.h billingResult, List purchases) {
+        Intrinsics.checkNotNullParameter(result, "$result");
+        Intrinsics.checkNotNullParameter(billingResult, "billingResult");
+        Intrinsics.checkNotNullParameter(purchases, "purchases");
+        if (billingResult.b() != 0) {
+            result.a(Integer.valueOf(billingResult.b()));
+            return;
+        }
+        JSONArray jSONArray = new JSONArray();
+        Iterator it = purchases.iterator();
+        while (it.hasNext()) {
+            Purchase purchase = (Purchase) it.next();
+            JSONObject jSONObject = new JSONObject();
+            jSONObject.put("products", new JSONArray((Collection) purchase.f()));
+            jSONObject.put("signature", purchase.k());
+            jSONObject.put("transactionReceipt", purchase.d());
+            jSONArray.put(jSONObject);
+        }
+        result.a(jSONArray.toString());
+    }
+
+    private final void g1() {
+        com.android.billingclient.api.d a10 = com.android.billingclient.api.d.k(this).c().e(new q() { // from class: com.fitatu.tracker.i
+            @Override // d6.q
+            public final void a(com.android.billingclient.api.h hVar, List list) {
+                MainActivity.h1(hVar, list);
+            }
+        }).a();
+        Intrinsics.checkNotNullExpressionValue(a10, "build(...)");
+        this.E = a10;
+        if (a10 == null) {
+            Intrinsics.o("billingClient");
+            a10 = null;
+        }
+        a10.q(new b());
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void h1(com.android.billingclient.api.h hVar, List list) {
+        Intrinsics.checkNotNullParameter(hVar, "<anonymous parameter 0>");
+    }
+
+    @Override // io.flutter.embedding.android.g, io.flutter.embedding.android.d
+    public void d(@NotNull io.flutter.embedding.engine.a flutterEngine) {
+        Intrinsics.checkNotNullParameter(flutterEngine, "flutterEngine");
+        super.d(flutterEngine);
+        Iterator<c> it = this.F.iterator();
+        while (it.hasNext()) {
+            it.next().e(flutterEngine);
+        }
+        this.F.clear();
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // io.flutter.embedding.android.g, io.flutter.embedding.android.d
+    public void i(@NotNull io.flutter.embedding.engine.a flutterEngine) {
+        Intrinsics.checkNotNullParameter(flutterEngine, "flutterEngine");
+        super.i(flutterEngine);
+        this.F.clear();
+        vj.b l10 = flutterEngine.j().l();
+        Intrinsics.checkNotNullExpressionValue(l10, "getBinaryMessenger(...)");
+        ia.c cVar = new ia.c(new defpackage.c(l10, null, 2, 0 == true ? 1 : 0), new a());
+        this.F.add(cVar);
+        i.a.h(defpackage.i.f35734a, l10, cVar, null, 4, null);
+        Iterator<c> it = this.F.iterator();
+        while (it.hasNext()) {
+            it.next().h(flutterEngine);
+        }
+        new vj.j(l10, this.D).e(new j.c() { // from class: com.fitatu.tracker.h
+            @Override // vj.j.c
+            public final void onMethodCall(vj.i iVar, j.d dVar) {
+                MainActivity.d1(MainActivity.this, iVar, dVar);
+            }
+        });
+    }
+
+    @Override // io.flutter.embedding.android.g, androidx.fragment.app.FragmentActivity, e.j, androidx.core.app.j, android.app.Activity
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        g1();
+    }
+}
+
+

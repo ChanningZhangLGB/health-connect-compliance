@@ -11,6 +11,12 @@ classifier, and an LLM-based analysis of the policy texts themselves.
 
 ## How it works
 
+<p align="center">
+  <img src="docs/framework.png" width="900" alt="The framework of the Health Connect compliance study">
+  <br>
+  <em>The framework of the Health Connect compliance study.</em>
+</p>
+
 The study answers three research questions, each a self-contained sub-project with a
 runnable 20-app sample:
 
